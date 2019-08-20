@@ -1,14 +1,3 @@
-<div id="glowscript" class="glowscript">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<link type="text/css" href="https://s3.amazonaws.com/glowscript/css/redmond/2.1/jquery-ui.custom.css" rel="stylesheet" />
-<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" type="text/css" />
-<link type="text/css" href="https://s3.amazonaws.com/glowscript/css/ide.css" rel="stylesheet" />
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-<script type="text/javascript" src="https://s3.amazonaws.com/glowscript/lib/jquery/2.1/jquery.min.js"></script>
-<script type="text/javascript" src="https://s3.amazonaws.com/glowscript/lib/jquery/2.1/jquery-ui.custom.min.js"></script>
-<script type="text/javascript" src="https://s3.amazonaws.com/glowscript/package/glow.2.8.min.js"></script>
-<script type="text/javascript" src="https://s3.amazonaws.com/glowscript/package/RSrun.2.8.min.js"></script>
-<script type="text/javascript"><!--//--><![CDATA[//><!--
 
 // START JAVASCRIPT
 ;(function() {"use strict";
@@ -471,6 +460,3 @@ if (!main.__argnames__) Object.defineProperties(main, {
 });
 ;$(function(){ window.__context = { glowscript_container: $("#glowscript").removeAttr("id") }; main(function(err) {;}) })})()
 // END JAVASCRIPT
-
-//--><!]]></script>
-</div>
