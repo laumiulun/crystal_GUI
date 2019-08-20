@@ -1,4 +1,3 @@
-
 // START JAVASCRIPT
 ;(function() {"use strict";
 
@@ -9,7 +8,7 @@ var _streamline = typeof srequire === 'function' ? srequire("streamline-runtime/
 var _filename = "unknown";
 
 var main = _streamline.async(regeneratorRuntime.mark(function _$$main$$(_2) {
-    var build, build_button, clear, reset, set_bondab, set_ra, set_rb, set_L, version, box, sphere, simple_sphere, cylinder, pyramid, cone, helix, ellipsoid, ring, arrow, compound, display, vector, print, type, scene, RS_ls, scene5, L, bond_ab, ra_int, rb_int, ra, rb, ra_item, rb_item, cylinder_item, total_item, running, RS_unpack, it0, b1, b2, it1, ib1, it2, ib2, it3, ib3, it4, ib4, __name__, strings;
+    var build, build_button, clear, reset, set_bondab, set_ra, set_rb, set_L, version, box, sphere, simple_sphere, cylinder, pyramid, cone, helix, ellipsoid, ring, arrow, compound, display, vector, print, type, scene, RS_ls, scene5, L, bond_ab, ra_int, rb_int, ra, rb, ra_item, rb_item, cylinder_item, total_item, running, RS_unpack, it0, b1, b2, it1, ib1, it2, ib2, it3, ib3, it4, ib4, b, __name__, strings, RS_Iter11, RS_Index11;
 
     return regeneratorRuntime.wrap(function _$$main$$$(_context) {
         while (1) {
@@ -379,40 +378,66 @@ var main = _streamline.async(regeneratorRuntime.mark(function _$$main$$(_2) {
                     b1 = RS_interpolate_kwargs.call(this, button, [RS_desugar_kwargs({ text: "Run", pos: scene5.title_anchor, bind: build_button })]);
                     "193";
                     b2 = RS_interpolate_kwargs.call(this, button, [RS_desugar_kwargs({ text: "Reset", pos: scene5.title_anchor, bind: reset })]);
-                    "197";
+                    "196";
                     it1 = RS_interpolate_kwargs.call(this, wtext, [RS_desugar_kwargs({ text: "L: " })]);
-                    "198";
+                    "197";
                     ib1 = RS_interpolate_kwargs.call(this, winput, [RS_desugar_kwargs({ type: "numeric", pos: scene5.caption_anchor, bind: set_L, text: 1 })]);
-                    "200";
+                    "199";
                     scene5.append_to_caption("\n");
-                    "202";
+                    "201";
                     it2 = RS_interpolate_kwargs.call(this, wtext, [RS_desugar_kwargs({ text: "bond_ab: " })]);
-                    "203";
+                    "202";
                     ib2 = RS_interpolate_kwargs.call(this, winput, [RS_desugar_kwargs({ type: "numeric", pos: scene5.caption_anchor, bind: set_bondab, text: 2.7266 })]);
+                    "204";
+                    RS_interpolate_kwargs.call(this, wtext, [RS_desugar_kwargs({ text: "\\(   \\unicode{x212B}   \\)" })]);
                     "205";
-                    RS_interpolate_kwargs.call(this, wtext, [RS_desugar_kwargs({ text: "\\(   \\unicode{x212B}   \\)" })]);
-                    "206";
                     scene5.append_to_caption("\n");
-                    "209";
+                    "208";
                     it3 = RS_interpolate_kwargs.call(this, wtext, [RS_desugar_kwargs({ text: "ra: " })]);
-                    "210";
+                    "209";
                     ib3 = RS_interpolate_kwargs.call(this, winput, [RS_desugar_kwargs({ type: "numeric", pos: scene5.caption_anchor, bind: set_ra, text: .79 })]);
-                    "211";
+                    "210";
                     RS_interpolate_kwargs.call(this, wtext, [RS_desugar_kwargs({ text: "\\(   \\unicode{x212B}   \\)" })]);
-                    "213";
+                    "212";
                     scene5.append_to_caption("\n");
-                    "216";
+                    "215";
                     it4 = RS_interpolate_kwargs.call(this, wtext, [RS_desugar_kwargs({ text: "rb: " })]);
-                    "217";
+                    "216";
                     ib4 = RS_interpolate_kwargs.call(this, winput, [RS_desugar_kwargs({ type: "numeric", pos: scene5.caption_anchor, bind: set_rb, text: 1.91 })]);
-                    "218";
+                    "217";
                     RS_interpolate_kwargs.call(this, wtext, [RS_desugar_kwargs({ text: "\\(   \\unicode{x212B}   \\)" })]);
-                    "220";
+                    "219";
                     scene5.append_to_caption("\n");
-                    "221";
+                    "220";
                     MathJax.Hub.Queue(RS_list_decorate(["Typeset", MathJax.Hub]));
+                    "225";
 
-                case 136:
+                case 137:
+                    if (!true) {
+                            _context.next = 145;
+                            break;
+                        }
+
+                    "226";
+                    _context.next = 141;
+                    return _streamline.await(_filename, 412, null, rate, 1, null, false, [100, true]);
+
+                case 141:
+                    "227";
+                    if (running) {
+                            "228";
+                            RS_Iter11 = RS_Iterable(total_item);
+
+                            for (RS_Index11 = 0; RS_Index11["<"](RS_Iter11.length); RS_Index11++) {
+                                b = RS_Iter11[RS_Index11];
+                                "229";
+                                RS_interpolate_kwargs.call(b, b.rotate, [RS_desugar_kwargs({ angle: .01, axis: vector(0, 1, 0), origin: vector(0, 0, 0) })]);
+                            }
+                        }
+                    _context.next = 137;
+                    break;
+
+                case 145:
                 case "end":
                     return _context.stop();
             }
