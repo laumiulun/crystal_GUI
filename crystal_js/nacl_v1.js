@@ -1,1 +1,476 @@
-!function(){"use strict";var e="function"==typeof srequire?srequire("streamline-runtime/lib/callbacks/regenerator"):Streamline.srequire("streamline-runtime/lib/callbacks/regenerator"),t="function"==typeof srequire?srequire("streamline-runtime/lib/callbacks/runtime"):Streamline.srequire("streamline-runtime/lib/callbacks/runtime"),r=t.async(e.mark(function r(i){var s,n,o,_,l,c,p,u,g,d,w,h,S,R,k,b,m,f,x,v,y,C,j,P,I,q,B;return e.wrap(function(e){for(;;)switch(e.prev=e.next){case 0:s=function(e,t,r,a,i,s,n){for(var o,_,l,c,p=e["-u"]();p["<"](e["+"](1));p++){c=p;for(var u=e["-u"]();u["<"](e["+"](1));u++){l=u;for(var h=e["-u"]();h["<"](e["+"](1));h++)_=h,RS_equals(e%2,1)?(RS_equals(abs(c["+"](l)["+"](_))%2,0)?(o=RS_interpolate_kwargs.call(this,g,[RS_desugar_kwargs({pos:w(c,l,_),radius:t,color:color.magenta})]),a.append(o)):(o=RS_interpolate_kwargs.call(this,g,[RS_desugar_kwargs({pos:w(c,l,_),radius:r,color:color.green})]),i.append(o)),c["+"](1)["<="](e)&&(o=RS_interpolate_kwargs.call(this,d,[RS_desugar_kwargs({pos:w(c,l,_),axis:w(1,0,0),radius:.01,color:color.white})]),s.append(o)),l["+"](1)["<="](e)&&(o=RS_interpolate_kwargs.call(this,d,[RS_desugar_kwargs({pos:w(c,l,_),axis:w(0,1,0),radius:.01,color:color.white})]),s.append(o)),_["+"](1)["<="](e)&&(o=RS_interpolate_kwargs.call(this,d,[RS_desugar_kwargs({pos:w(c,l,_),axis:w(0,0,1),radius:.01,color:color.white})]),s.append(o))):(RS_equals(abs(c["+"](l)["+"](_))%2,1)?(o=RS_interpolate_kwargs.call(this,g,[RS_desugar_kwargs({pos:w(c,l,_),radius:t,color:color.magenta})]),a.append(o)):(o=RS_interpolate_kwargs.call(this,g,[RS_desugar_kwargs({pos:w(c,l,_),radius:r,color:color.green})]),i.append(o)),c["<"](e)&&(o=RS_interpolate_kwargs.call(this,d,[RS_desugar_kwargs({pos:w(c,l,_),axis:w(1,0,0),radius:.01,color:color.white})]),s.append(o)),l["<"](e)&&(o=RS_interpolate_kwargs.call(this,d,[RS_desugar_kwargs({pos:w(c,l,_),axis:w(0,1,0),radius:.01,color:color.white})]),s.append(o)),_["<"](e)&&(o=RS_interpolate_kwargs.call(this,d,[RS_desugar_kwargs({pos:w(c,l,_),axis:w(0,0,1),radius:.01,color:color.white})]),s.append(o)))}}return n=a["+"](i)["+"](s),[a,i,s,n]},n=function(e){j=!j,e.text=j?"Pause":"Run"},o=function(){for(var e=RS_Iterable(x),t=0;t["<"](e.length);t++)e[t].visible=!1,void 0;for(var r=RS_Iterable(v),a=0;a["<"](r.length);a++)r[a].visible=!1,void 0;for(var i=RS_Iterable(y),s=0;s["<"](i.length);s++)i[s].visible=!1,void 0},_=function(){var e;o(),e=s(S,m,f,x,v,y,C),e=RS_unpack_asarray(4,e),x=e[0],v=e[1],y=e[2],C=e[3]},l=function(e){var t,r,a;t=e.number,r=k["/"](2)["/"](t)["*"](1),a=b["/"](2)["/"](t)["*"](1);for(var i=RS_Iterable(x),s=0;s["<"](i.length);s++)i[s].radius=r;for(var n=RS_Iterable(v),o=0;o["<"](n.length);o++)n[o].radius=a;return t},c=function(e){var t;t=e.number["/"](2)["/"](R)["*"](1);for(var r=RS_Iterable(x),a=0;a["<"](r.length);a++)r[a].radius=t;return t},p=function(e){var t;t=e.number["/"](2)["/"](R)["*"](1);for(var r=RS_Iterable(v),a=0;a["<"](r.length);a++)r[a].radius=t;return t},u=function(e){var t,r;t=e.number,o(),h.camera.pos=w(0,0,2["*"](t)),h.center=w(0,0,0),r=s(t,m,f,x,v,y,C),r=RS_unpack_asarray(4,r),x=r[0],v=r[1],y=r[2],C=r[3]},RS_list_decorate(["2.8","glowscript"]),Array.prototype["+"]=function(e){return this.concat(e)},Array.prototype["*"]=function(e){return __array_times_number(this,e)},"__main__",window.__GSlang="vpython",vp_box,g=vp_sphere,vp_simple_sphere,d=vp_cylinder,vp_pyramid,vp_cone,vp_helix,vp_ellipsoid,vp_ring,vp_arrow,vp_compound,canvas,w=vec,GSprint,pytype,canvas(),(0,a.pythonize.strings)(),h=RS_interpolate_kwargs.call(this,canvas,[RS_desugar_kwargs({background:color.black,width:600,length:600,center:w(0,0,0)})]),S=1,R=2.386,b=1.99,m=(k=.79)["/"](2)["/"](R)["*"](1),f=b["/"](2)["/"](R)["*"](1),h.autoscale=!0,x=RS_list_decorate([]),v=RS_list_decorate([]),y=RS_list_decorate([]),C=RS_list_decorate([]),j=!1,s.__argnames__||Object.defineProperties(s,{__argnames__:{value:["L","ra","rb","ra_item","rb_item","cylinder_item","total_item"]}}),n.__argnames__||Object.defineProperties(n,{__argnames__:{value:["s"]}}),l.__argnames__||Object.defineProperties(l,{__argnames__:{value:["s"]}}),c.__argnames__||Object.defineProperties(c,{__argnames__:{value:["s"]}}),p.__argnames__||Object.defineProperties(p,{__argnames__:{value:["s"]}}),u.__argnames__||Object.defineProperties(u,{__argnames__:{value:["s"]}}),P=s(S,m,f,x,v,y,C),P=RS_unpack_asarray(4,P),x=P[0],v=P[1],y=P[2],C=P[3],RS_interpolate_kwargs.call(this,wtext,[RS_desugar_kwargs({text:"<h2>FCC Lattice Example: Sodium Cloride(NaCl)</h2><hr>",pos:h.title_anchor})]),RS_interpolate_kwargs.call(this,wtext,[RS_desugar_kwargs({text:"Sodium Cloride, also known as salt is a ionic compound with the chemical symbol\n\\(NaCl \\), which contain two type of elements (Sodium and Cloride). The two elements \nare arranged in a cubic structure with a Face Center Cubic(FCC) lattice.\n",pos:h.title_anchor})]),RS_interpolate_kwargs.call(this,wtext,[RS_desugar_kwargs({text:"<h3>Control</h3><ul><li><b>Rotate</b>: Right Button drag or Ctrl-drag</li><li><b>Zoom</b>: Drag with middle button or use scroll wheel</li></ul>",pos:h.title_anchor})]),RS_interpolate_kwargs.call(this,wtext,[RS_desugar_kwargs({text:'<h3>Modifying Structure</h3><ul><li><b>L</b>: Number of Unit Cells(Integar Only)</li><li><b>bond_ab</b>: Lattice Constant(\\(   \\unicode{x212B}   \\))</li><li><b><font color = "Purple">r_a<font color = "Black"></b>: Atomic Radius of Sodium [<font color ="Purple">Purple<font color ="black">] (\\(   \\unicode{x212B}   \\))</li><li><b><font color = "Green">r_b<font color = "Black"></b>: Atomic Radius of Chloride [<font color ="Green">Green<font color ="black">] (\\(   \\unicode{x212B}   \\))</li></ul>',pos:h.title_anchor})]),RS_interpolate_kwargs.call(this,wtext,[RS_desugar_kwargs({text:"<hr>",pos:h.title_anchor})]),RS_interpolate_kwargs.call(this,button,[RS_desugar_kwargs({text:"Run",pos:h.title_anchor,bind:n})]),RS_interpolate_kwargs.call(this,button,[RS_desugar_kwargs({text:"Reset",pos:h.title_anchor,bind:_})]),RS_interpolate_kwargs.call(this,wtext,[RS_desugar_kwargs({text:"<h5>Parameters:</h5>Adjust the parameters using the input box(press Enter key after modifying parameters every time)\n"})]),RS_interpolate_kwargs.call(this,wtext,[RS_desugar_kwargs({text:"L: "})]),RS_interpolate_kwargs.call(this,winput,[RS_desugar_kwargs({type:"numeric",pos:h.caption_anchor,bind:u,text:1})]),h.append_to_caption("\n"),RS_interpolate_kwargs.call(this,wtext,[RS_desugar_kwargs({text:"bond_ab: "})]),RS_interpolate_kwargs.call(this,winput,[RS_desugar_kwargs({type:"numeric",pos:h.caption_anchor,bind:l,text:2.7266})]),RS_interpolate_kwargs.call(this,wtext,[RS_desugar_kwargs({text:"\\(   \\unicode{x212B}   \\)"})]),h.append_to_caption("\n"),RS_interpolate_kwargs.call(this,wtext,[RS_desugar_kwargs({text:"ra: "})]),RS_interpolate_kwargs.call(this,winput,[RS_desugar_kwargs({type:"numeric",pos:h.caption_anchor,bind:c,text:.79})]),RS_interpolate_kwargs.call(this,wtext,[RS_desugar_kwargs({text:"\\(   \\unicode{x212B}   \\)"})]),h.append_to_caption("\n"),RS_interpolate_kwargs.call(this,wtext,[RS_desugar_kwargs({text:"rb: "})]),RS_interpolate_kwargs.call(this,winput,[RS_desugar_kwargs({type:"numeric",pos:h.caption_anchor,bind:p,text:1.91})]),RS_interpolate_kwargs.call(this,wtext,[RS_desugar_kwargs({text:"\\(   \\unicode{x212B}   \\)"})]),h.append_to_caption("\n"),MathJax.Hub.Queue(RS_list_decorate(["Typeset",MathJax.Hub]));case 135:return e.next=139,t.await("unknown",410,null,rate,1,null,!1,[100,!0]);case 139:if(j)for(q=RS_Iterable(C),B=0;B["<"](q.length);B++)I=q[B],RS_interpolate_kwargs.call(I,I.rotate,[RS_desugar_kwargs({angle:.01,axis:w(0,1,0),origin:w(0,0,0)})]);e.next=135;break;case 143:case"end":return e.stop()}},r,this)}),0,1),a={};a.pythonize={},a.pythonize.strings=function(){var e,t,r,a;e=set("capitalize strip lstrip rstrip islower isupper isspace lower upper swapcase center count endswith startswith find rfind index rindex format join ljust rjust partition rpartition replace split rsplit splitlines zfill".split(" ")),arguments.length?t=arguments[0]?Array.prototype.slice.call(arguments):null:((a=RS_set()).jsset.add("split"),a.jsset.add("replace"),t=a),t&&(e=e.difference(set(t)));for(var i=RS_Iterable(e),s=0;s["<"](i.length);s++)r=i[s],(RS_expr_temp=String.prototype)["number"==typeof r&&r["<"](0)?RS_expr_temp.length["+"](r):r]=(RS_expr_temp=RS_str.prototype)["number"==typeof r&&r["<"](0)?RS_expr_temp.length["+"](r):r]},r.__argnames__||Object.defineProperties(r,{__argnames__:{value:["_"]}}),$(function(){window.__context={glowscript_container:$("#glowscript").removeAttr("id")},r(function(e){})})}();
+<div id="glowscript" class="glowscript">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link type="text/css" href="https://s3.amazonaws.com/glowscript/css/redmond/2.1/jquery-ui.custom.css" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" type="text/css" />
+<link type="text/css" href="https://s3.amazonaws.com/glowscript/css/ide.css" rel="stylesheet" />
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script type="text/javascript" src="https://s3.amazonaws.com/glowscript/lib/jquery/2.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://s3.amazonaws.com/glowscript/lib/jquery/2.1/jquery-ui.custom.min.js"></script>
+<script type="text/javascript" src="https://s3.amazonaws.com/glowscript/package/glow.2.8.min.js"></script>
+<script type="text/javascript" src="https://s3.amazonaws.com/glowscript/package/RSrun.2.8.min.js"></script>
+<script type="text/javascript"><!--//--><![CDATA[//><!--
+
+// START JAVASCRIPT
+;(function() {"use strict";
+
+var regeneratorRuntime = typeof srequire === 'function' ? srequire("streamline-runtime/lib/callbacks/regenerator") : Streamline.srequire("streamline-runtime/lib/callbacks/regenerator");
+
+var _streamline = typeof srequire === 'function' ? srequire("streamline-runtime/lib/callbacks/runtime") : Streamline.srequire("streamline-runtime/lib/callbacks/runtime");
+
+var _filename = "unknown";
+
+var main = _streamline.async(regeneratorRuntime.mark(function _$$main$$(_2) {
+    var build, build_button, clear, reset, set_bondab, set_ra, set_rb, set_L, version, box, sphere, simple_sphere, cylinder, pyramid, cone, helix, ellipsoid, ring, arrow, compound, display, vector, print, type, scene, RS_ls, scene5, L, bond_ab, ra_int, rb_int, ra, rb, ra_item, rb_item, cylinder_item, total_item, running, RS_unpack, it0, b1, b2, it1, ib1, it2, ib2, it3, ib3, it4, ib4, __name__, strings;
+
+    return regeneratorRuntime.wrap(function _$$main$$$(_context) {
+        while (1) {
+            switch (_context.prev = _context.next) {
+                case 0:
+                    build = function build(L, ra, rb, ra_item, rb_item, cylinder_item, total_item) {
+                        var RS_ls, b, k, j, i;
+                        "35";
+                        for (var RS_Index1 = L["-u"](); RS_Index1["<"](L["+"](1)); RS_Index1++) {
+                            i = RS_Index1;
+                            "36";
+                            for (var RS_Index2 = L["-u"](); RS_Index2["<"](L["+"](1)); RS_Index2++) {
+                                j = RS_Index2;
+                                "37";
+                                for (var RS_Index3 = L["-u"](); RS_Index3["<"](L["+"](1)); RS_Index3++) {
+                                    k = RS_Index3;
+                                    "39";
+                                    if (RS_equals(L % 2, 1)) {
+                                            "40";
+                                            if (RS_equals(abs(i["+"](j)["+"](k)) % 2, 0)) {
+                                                    "42";
+                                                    b = RS_interpolate_kwargs.call(this, sphere, [RS_desugar_kwargs({ pos: vector(i, j, k), radius: ra, color: color.magenta })]);
+                                                    "43";
+                                                    ra_item.append(b);
+                                                    "44";
+                                                } else {
+                                                    "45";
+                                                    b = RS_interpolate_kwargs.call(this, sphere, [RS_desugar_kwargs({ pos: vector(i, j, k), radius: rb, color: color.green })]);
+                                                    "46";
+                                                    rb_item.append(b);
+                                                }
+                                            "48";
+                                            if (i["+"](1)["<="](L)) {
+                                                    "49";
+                                                    b = RS_interpolate_kwargs.call(this, cylinder, [RS_desugar_kwargs({ pos: vector(i, j, k), axis: vector(1, 0, 0), radius: .01, color: color.white })]);
+                                                    "50";
+                                                    cylinder_item.append(b);
+                                                }
+                                            "51";
+                                            if (j["+"](1)["<="](L)) {
+                                                    "52";
+                                                    b = RS_interpolate_kwargs.call(this, cylinder, [RS_desugar_kwargs({ pos: vector(i, j, k), axis: vector(0, 1, 0), radius: .01, color: color.white })]);
+                                                    "53";
+                                                    cylinder_item.append(b);
+                                                }
+                                            "54";
+                                            if (k["+"](1)["<="](L)) {
+                                                    "55";
+                                                    b = RS_interpolate_kwargs.call(this, cylinder, [RS_desugar_kwargs({ pos: vector(i, j, k), axis: vector(0, 0, 1), radius: .01, color: color.white })]);
+                                                    "56";
+                                                    cylinder_item.append(b);
+                                                    "58";
+                                                }
+                                        } else {
+                                            "59";
+                                            if (RS_equals(abs(i["+"](j)["+"](k)) % 2, 1)) {
+                                                    "61";
+                                                    b = RS_interpolate_kwargs.call(this, sphere, [RS_desugar_kwargs({ pos: vector(i, j, k), radius: ra, color: color.magenta })]);
+                                                    "62";
+                                                    ra_item.append(b);
+                                                    "63";
+                                                } else {
+                                                    "64";
+                                                    b = RS_interpolate_kwargs.call(this, sphere, [RS_desugar_kwargs({ pos: vector(i, j, k), radius: rb, color: color.green })]);
+                                                    "65";
+                                                    rb_item.append(b);
+                                                }
+                                            "66";
+                                            if (i["<"](L)) {
+                                                    "67";
+                                                    b = RS_interpolate_kwargs.call(this, cylinder, [RS_desugar_kwargs({ pos: vector(i, j, k), axis: vector(1, 0, 0), radius: .01, color: color.white })]);
+                                                    "68";
+                                                    cylinder_item.append(b);
+                                                }
+                                            "69";
+                                            if (j["<"](L)) {
+                                                    "70";
+                                                    b = RS_interpolate_kwargs.call(this, cylinder, [RS_desugar_kwargs({ pos: vector(i, j, k), axis: vector(0, 1, 0), radius: .01, color: color.white })]);
+                                                    "71";
+                                                    cylinder_item.append(b);
+                                                }
+                                            "72";
+                                            if (k["<"](L)) {
+                                                    "73";
+                                                    b = RS_interpolate_kwargs.call(this, cylinder, [RS_desugar_kwargs({ pos: vector(i, j, k), axis: vector(0, 0, 1), radius: .01, color: color.white })]);
+                                                    "74";
+                                                    cylinder_item.append(b);
+                                                }
+                                        }
+                                }
+                            }
+                        }
+                        "76";
+                        total_item = ra_item["+"](rb_item)["+"](cylinder_item);
+                        "78";
+                        return [ra_item, rb_item, cylinder_item, total_item];
+                    };
+
+                    build_button = function build_button(s) {
+                        var RS_ls;
+                        "81";
+                        "82";
+                        "83";
+                        "84";
+                        "85";
+                        "86";
+                        running = !running;
+                        "87";
+                        if (running) {
+                                s.text = "Pause";
+                            } else {
+                                s.text = "Run";
+                            }
+                    };
+
+                    clear = function clear() {
+                        var RS_ls, i;
+                        "93";
+                        var RS_Iter4 = RS_Iterable(ra_item);
+                        for (var RS_Index4 = 0; RS_Index4["<"](RS_Iter4.length); RS_Index4++) {
+                            i = RS_Iter4[RS_Index4];
+                            "94";
+                            i.visible = false;
+                            "95";
+                            i = undefined;
+                        }
+                        "97";
+                        var RS_Iter5 = RS_Iterable(rb_item);
+                        for (var RS_Index5 = 0; RS_Index5["<"](RS_Iter5.length); RS_Index5++) {
+                            i = RS_Iter5[RS_Index5];
+                            "98";
+                            i.visible = false;
+                            "99";
+                            i = undefined;
+                        }
+                        "101";
+                        var RS_Iter6 = RS_Iterable(cylinder_item);
+                        for (var RS_Index6 = 0; RS_Index6["<"](RS_Iter6.length); RS_Index6++) {
+                            i = RS_Iter6[RS_Index6];
+                            "102";
+                            i.visible = false;
+                            "103";
+                            i = undefined;
+                        }
+                    };
+
+                    reset = function reset() {
+                        var RS_ls, RS_unpack;
+                        "108";
+                        "109";
+                        "110";
+                        "111";
+                        "112";
+                        clear();
+                        "113";
+                        RS_unpack = build(L, ra, rb, ra_item, rb_item, cylinder_item, total_item);
+                        RS_unpack = RS_unpack_asarray(4, RS_unpack);
+                        ra_item = RS_unpack[0];
+                        rb_item = RS_unpack[1];
+                        cylinder_item = RS_unpack[2];
+                        total_item = RS_unpack[3];
+                    };
+
+                    set_bondab = function set_bondab(s) {
+                        var RS_ls, bond_ab, ra, rb, x, y;
+                        "118";
+                        bond_ab = s.number;
+                        "119";
+                        ra = ra_int["/"](2)["/"](bond_ab)["*"](1);
+                        "120";
+                        rb = rb_int["/"](2)["/"](bond_ab)["*"](1);
+                        "121";
+                        var RS_Iter7 = RS_Iterable(ra_item);
+                        for (var RS_Index7 = 0; RS_Index7["<"](RS_Iter7.length); RS_Index7++) {
+                            x = RS_Iter7[RS_Index7];
+                            "122";
+                            x.radius = ra;
+                        }
+                        "123";
+                        var RS_Iter8 = RS_Iterable(rb_item);
+                        for (var RS_Index8 = 0; RS_Index8["<"](RS_Iter8.length); RS_Index8++) {
+                            y = RS_Iter8[RS_Index8];
+                            "124";
+                            y.radius = rb;
+                        }
+                        "125";
+                        return bond_ab;
+                    };
+
+                    set_ra = function set_ra(s) {
+                        var RS_ls, ra_int, ra, x;
+                        "129";
+                        ra_int = s.number;
+                        "130";
+                        ra = ra_int["/"](2)["/"](bond_ab)["*"](1);
+                        "131";
+                        var RS_Iter9 = RS_Iterable(ra_item);
+                        for (var RS_Index9 = 0; RS_Index9["<"](RS_Iter9.length); RS_Index9++) {
+                            x = RS_Iter9[RS_Index9];
+                            "132";
+                            x.radius = ra;
+                        }
+                        "133";
+                        return ra;
+                    };
+
+                    set_rb = function set_rb(s) {
+                        var RS_ls, rb_int, rb, y;
+                        "136";
+                        rb_int = s.number;
+                        "137";
+                        rb = rb_int["/"](2)["/"](bond_ab)["*"](1);
+                        "138";
+                        var RS_Iter10 = RS_Iterable(rb_item);
+                        for (var RS_Index10 = 0; RS_Index10["<"](RS_Iter10.length); RS_Index10++) {
+                            y = RS_Iter10[RS_Index10];
+                            "139";
+                            y.radius = rb;
+                        }
+                        "140";
+                        return rb;
+                    };
+
+                    set_L = function set_L(s) {
+                        var RS_ls, L, RS_unpack;
+                        "143";
+                        "144";
+                        "145";
+                        "146";
+                        "147";
+                        L = s.number;
+                        "148";
+                        clear();
+                        "150";
+                        scene5.camera.pos = vector(0, 0, 2["*"](L));
+                        "151";
+                        scene5.center = vector(0, 0, 0);
+                        "153";
+                        RS_unpack = build(L, ra, rb, ra_item, rb_item, cylinder_item, total_item);
+                        RS_unpack = RS_unpack_asarray(4, RS_unpack);
+                        ra_item = RS_unpack[0];
+                        rb_item = RS_unpack[1];
+                        cylinder_item = RS_unpack[2];
+                        total_item = RS_unpack[3];
+                    };
+
+                    version = RS_list_decorate(["2.8", "glowscript"]);
+                    Array.prototype['+'] = function (r) {
+                        return this.concat(r);
+                    };
+                    Array.prototype['*'] = function (r) {
+                        return __array_times_number(this, r);
+                    };
+                    __name__ = '__main__';
+
+                    window.__GSlang = "vpython";
+                    box = vp_box;
+                    sphere = vp_sphere;
+                    simple_sphere = vp_simple_sphere;
+                    cylinder = vp_cylinder;
+                    pyramid = vp_pyramid;
+                    cone = vp_cone;
+                    helix = vp_helix;
+                    ellipsoid = vp_ellipsoid;
+                    ring = vp_ring;
+                    arrow = vp_arrow;
+                    compound = vp_compound;
+                    display = canvas;
+                    vector = vec;
+                    print = GSprint;
+                    type = pytype;
+                    scene = canvas();
+                    strings = RS_modules.pythonize.strings;
+
+
+                    strings();
+                    "6";
+                    scene5 = RS_interpolate_kwargs.call(this, canvas, [RS_desugar_kwargs({ background: color.black, width: 600, length: 600, center: vector(0, 0, 0) })]);
+                    "8";
+                    L = 1;
+                    "9";
+                    bond_ab = 2.386;
+                    "10";
+                    ra_int = .79;
+                    "11";
+                    rb_int = 1.99;
+                    "13";
+                    ra = ra_int["/"](2)["/"](bond_ab)["*"](1);
+                    "14";
+                    rb = rb_int["/"](2)["/"](bond_ab)["*"](1);
+                    "18";
+                    scene5.autoscale = true;
+                    "28";
+                    ra_item = RS_list_decorate([]);
+                    "29";
+                    rb_item = RS_list_decorate([]);
+                    "30";
+                    cylinder_item = RS_list_decorate([]);
+                    "31";
+                    total_item = RS_list_decorate([]);
+                    "32";
+                    running = false;
+                    "34";
+                    ;
+                    if (!build.__argnames__) Object.defineProperties(build, {
+                        __argnames__: { value: ["L", "ra", "rb", "ra_item", "rb_item", "cylinder_item", "total_item"] }
+                    });
+
+                    "80";
+                    ;
+                    if (!build_button.__argnames__) Object.defineProperties(build_button, {
+                        __argnames__: { value: ["s"] }
+                    });
+
+                    "92";
+                    ;
+
+                    "107";
+                    ;
+
+                    "117";
+                    ;
+                    if (!set_bondab.__argnames__) Object.defineProperties(set_bondab, {
+                        __argnames__: { value: ["s"] }
+                    });
+
+                    "128";
+                    ;
+                    if (!set_ra.__argnames__) Object.defineProperties(set_ra, {
+                        __argnames__: { value: ["s"] }
+                    });
+
+                    "135";
+                    ;
+                    if (!set_rb.__argnames__) Object.defineProperties(set_rb, {
+                        __argnames__: { value: ["s"] }
+                    });
+
+                    "142";
+                    ;
+                    if (!set_L.__argnames__) Object.defineProperties(set_L, {
+                        __argnames__: { value: ["s"] }
+                    });
+
+                    "159";
+                    RS_unpack = build(L, ra, rb, ra_item, rb_item, cylinder_item, total_item);
+                    RS_unpack = RS_unpack_asarray(4, RS_unpack);
+                    ra_item = RS_unpack[0];
+                    rb_item = RS_unpack[1];
+                    cylinder_item = RS_unpack[2];
+                    total_item = RS_unpack[3];
+                    "164";
+                    RS_interpolate_kwargs.call(this, wtext, [RS_desugar_kwargs({ text: "<h2>FCC Lattice Example: Sodium Chloride (NaCl)<\/h2><hr>", pos: scene5.title_anchor })]);
+                    "167";
+                    RS_interpolate_kwargs.call(this, wtext, [RS_desugar_kwargs({ text: "Sodium Cloride, occurs natually as white crystals of salt, is an ionic compound with the chemical symbol\n\\(NaCl \\). It is composed of two types of elements (Sodium and Chloride) forming Face Center Cubic (FCC) \nlattice structure by repeating each cubic unit cell.\n\n", pos: scene5.title_anchor })]);
+                    "170";
+                    RS_interpolate_kwargs.call(this, wtext, [RS_desugar_kwargs({ text: "<b>This version of animation adopts trinary atoms in each dimensions to illustrate the FCC structure. \n</b>", pos: scene5.title_anchor })]);
+                    "176";
+                    RS_interpolate_kwargs.call(this, wtext, [RS_desugar_kwargs({ text: "<h3>Control</h3><ul><li><b>Rotate</b>: Right Button drag or Ctrl-drag</li><li><b>Zoom</b>: Drag with middle button or use scroll wheel</li></ul>", pos: scene5.title_anchor })]);
+                    "184";
+                    RS_interpolate_kwargs.call(this, wtext, [RS_desugar_kwargs({ text: "<h3>Modifying Structure</h3><ul><li><b>L</b>: Number of Unit Cells(Integar Only)</li><li><b>bond_ab</b>: Lattice Constant(\\(   \\unicode{x212B}   \\))(1\\(   \\unicode{x212B}   \\) = \\(10^{-10} \\)meter)</li><li><b><font color = \"Purple\">r_a<font color = \"Black\"></b>: Atomic Radius of Sodium [<font color =\"Purple\">Purple<font color =\"black\">] (\\(   \\unicode{x212B}   \\))</li><li><b><font color = \"Green\">r_b<font color = \"Black\"></b>: Atomic Radius of Chloride [<font color =\"Green\">Green<font color =\"black\">] (\\(   \\unicode{x212B}   \\))</li></ul>", pos: scene5.title_anchor })]);
+                    "186";
+                    RS_interpolate_kwargs.call(this, wtext, [RS_desugar_kwargs({ text: "<hr>", pos: scene5.title_anchor })]);
+                    "188";
+                    it0 = RS_interpolate_kwargs.call(this, wtext, [RS_desugar_kwargs({ text: "<h5>Parameters:</h5>Adjust the lattice constants below to construct another FCC material.\nPress <b>Enter key</b> after <b>every</b> changes to take effect.\n" })]);
+                    "192";
+                    b1 = RS_interpolate_kwargs.call(this, button, [RS_desugar_kwargs({ text: "Run", pos: scene5.title_anchor, bind: build_button })]);
+                    "193";
+                    b2 = RS_interpolate_kwargs.call(this, button, [RS_desugar_kwargs({ text: "Reset", pos: scene5.title_anchor, bind: reset })]);
+                    "197";
+                    it1 = RS_interpolate_kwargs.call(this, wtext, [RS_desugar_kwargs({ text: "L: " })]);
+                    "198";
+                    ib1 = RS_interpolate_kwargs.call(this, winput, [RS_desugar_kwargs({ type: "numeric", pos: scene5.caption_anchor, bind: set_L, text: 1 })]);
+                    "200";
+                    scene5.append_to_caption("\n");
+                    "202";
+                    it2 = RS_interpolate_kwargs.call(this, wtext, [RS_desugar_kwargs({ text: "bond_ab: " })]);
+                    "203";
+                    ib2 = RS_interpolate_kwargs.call(this, winput, [RS_desugar_kwargs({ type: "numeric", pos: scene5.caption_anchor, bind: set_bondab, text: 2.7266 })]);
+                    "205";
+                    RS_interpolate_kwargs.call(this, wtext, [RS_desugar_kwargs({ text: "\\(   \\unicode{x212B}   \\)" })]);
+                    "206";
+                    scene5.append_to_caption("\n");
+                    "209";
+                    it3 = RS_interpolate_kwargs.call(this, wtext, [RS_desugar_kwargs({ text: "ra: " })]);
+                    "210";
+                    ib3 = RS_interpolate_kwargs.call(this, winput, [RS_desugar_kwargs({ type: "numeric", pos: scene5.caption_anchor, bind: set_ra, text: .79 })]);
+                    "211";
+                    RS_interpolate_kwargs.call(this, wtext, [RS_desugar_kwargs({ text: "\\(   \\unicode{x212B}   \\)" })]);
+                    "213";
+                    scene5.append_to_caption("\n");
+                    "216";
+                    it4 = RS_interpolate_kwargs.call(this, wtext, [RS_desugar_kwargs({ text: "rb: " })]);
+                    "217";
+                    ib4 = RS_interpolate_kwargs.call(this, winput, [RS_desugar_kwargs({ type: "numeric", pos: scene5.caption_anchor, bind: set_rb, text: 1.91 })]);
+                    "218";
+                    RS_interpolate_kwargs.call(this, wtext, [RS_desugar_kwargs({ text: "\\(   \\unicode{x212B}   \\)" })]);
+                    "220";
+                    scene5.append_to_caption("\n");
+                    "221";
+                    MathJax.Hub.Queue(RS_list_decorate(["Typeset", MathJax.Hub]));
+
+                case 136:
+                case "end":
+                    return _context.stop();
+            }
+        }
+    }, _$$main$$, this);
+}), 0, 1);
+
+var RS_modules = {};
+var ra_item, rb_item, cylinder_item, total_item, running;
+RS_modules.pythonize = {};
+
+(function () {
+    var strings = function strings() {
+        var string_funcs, exclude, name;
+        string_funcs = set("capitalize strip lstrip rstrip islower isupper isspace lower upper swapcase center count endswith startswith find rfind index rindex format join ljust rjust partition rpartition replace split rsplit splitlines zfill".split(" "));
+        if (!arguments.length) {
+                exclude = function () {
+                    var s = RS_set();
+                    s.jsset.add("split");
+                    s.jsset.add("replace");
+                    return s;
+                }();
+            } else if (arguments[0]) {
+                exclude = Array.prototype.slice.call(arguments);
+            } else {
+                exclude = null;
+            }
+        if (exclude) {
+                string_funcs = string_funcs.difference(set(exclude));
+            }
+        var RS_Iter0 = RS_Iterable(string_funcs);
+        for (var RS_Index0 = 0; RS_Index0["<"](RS_Iter0.length); RS_Index0++) {
+            name = RS_Iter0[RS_Index0];
+            (RS_expr_temp = String.prototype)[typeof name === "number" && name["<"](0) ? RS_expr_temp.length["+"](name) : name] = (RS_expr_temp = RS_str.prototype)[typeof name === "number" && name["<"](0) ? RS_expr_temp.length["+"](name) : name];
+        }
+    };
+
+    ;
+
+    RS_modules.pythonize.strings = strings;
+})();
+;
+if (!main.__argnames__) Object.defineProperties(main, {
+    __argnames__: { value: ["_"] }
+});
+;$(function(){ window.__context = { glowscript_container: $("#glowscript").removeAttr("id") }; main(function(err) {;}) })})()
+// END JAVASCRIPT
+
+//--><!]]></script>
+</div>
