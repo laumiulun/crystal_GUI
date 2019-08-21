@@ -365,7 +365,7 @@ var main = _streamline.async(regeneratorRuntime.mark(function _$$main$$(_2) {
                     "167";
                     RS_interpolate_kwargs.call(this, wtext, [RS_desugar_kwargs({ text: "Sodium Cloride, occurs natually as white crystals of salt, is an ionic compound with the chemical symbol\n\\(NaCl \\). It is composed of two types of elements (Sodium and Chloride) forming Face Center Cubic (FCC) \nlattice structure by repeating each cubic unit cell.\n\n", pos: scene5.title_anchor })]);
                     "170";
-                    RS_interpolate_kwargs.call(this, wtext, [RS_desugar_kwargs({ text: "<b>This version of animation adopts trinary atoms in each dimensions to illustrate the FCC structure. \n</b>", pos: scene5.title_anchor })]);
+                    RS_interpolate_kwargs.call(this, wtext, [RS_desugar_kwargs({ text: "<b>This version of animation adopts trinary atoms in each dimension to illustrate the FCC structure. \n</b>", pos: scene5.title_anchor })]);
                     "176";
                     RS_interpolate_kwargs.call(this, wtext, [RS_desugar_kwargs({ text: "<h3>Control</h3><ul><li><b>Rotate</b>: Right Button drag or Ctrl-drag</li><li><b>Zoom</b>: Drag with middle button or use scroll wheel</li></ul>", pos: scene5.title_anchor })]);
                     "184";
