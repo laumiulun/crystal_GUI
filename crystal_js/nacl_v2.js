@@ -10,7 +10,7 @@ var _streamline = typeof srequire === 'function' ? srequire("streamline-runtime/
 var _filename = "unknown";
 
 var main = _streamline.async(regeneratorRuntime.mark(function _$$main$$(_2) {
-    var axis_number, gen_csv, print_csv, del_csv, build, build_button, clear, reset, set_bondab, set_ra, set_rb, set_L, version, box, sphere, simple_sphere, cylinder, pyramid, cone, helix, ellipsoid, ring, arrow, compound, display, vector, print, type, scene, RS_ls, scene5, L, bond_ab, ra_int, rb_int, ra, rb, ra_item, rb_item, cylinder_item, total_item, running, RS_unpack, it0, b1, b2, it1, ib1, it2, ib2, it3, ib3, it4, ib4, ib5, ib6, it5, b, __name__, strings, RS_Iter20, RS_Index20;
+    var axis_number, gen_csv, print_csv, del_csv, build, build_button, clear, reset, set_bondab, set_ra, set_rb, set_scale_factor, set_L, version, box, sphere, simple_sphere, cylinder, pyramid, cone, helix, ellipsoid, ring, arrow, compound, display, vector, print, type, scene, RS_ls, scene5, L, bond_ab, ra_int, rb_int, bond_default_text, ra_default_text, rb_default_text, scale_factor, scale_default_text, ra, rb, ra_item, rb_item, cylinder_item, total_item, running, RS_unpack, it0, b1, b2, it1, ib1, it2, ib2, it3, ib3, it4, ib4, it5, ib5, ib6, ib7, it8, b, __name__, strings, RS_Iter22, RS_Index22;
 
     return regeneratorRuntime.wrap(function _$$main$$$(_context) {
         while (1) {
@@ -18,177 +18,177 @@ var main = _streamline.async(regeneratorRuntime.mark(function _$$main$$(_2) {
                 case 0:
                     axis_number = function axis_number(cylinder) {
                         var RS_ls, axis_num;
-                        "24";
+                        "33";
                         if (cylinder.axis.x === 1 || _typeof(cylinder.axis.x) === "object" && RS_equals(cylinder.axis.x, 1)) {
-                                "26";
+                                "35";
                                 axis_num = 0;
-                                "27";
+                                "36";
                             } else if (cylinder.axis.y === 1 || _typeof(cylinder.axis.y) === "object" && RS_equals(cylinder.axis.y, 1)) {
-                                "29";
+                                "38";
                                 axis_num = 1;
-                                "30";
+                                "39";
                             } else if (cylinder.axis.z === 1 || _typeof(cylinder.axis.z) === "object" && RS_equals(cylinder.axis.z, 1)) {
-                                "32";
+                                "41";
                                 axis_num = 2;
                             }
-                        "33";
+                        "42";
                         return axis_num;
                     };
 
                     gen_csv = function gen_csv() {
                         var RS_ls, file, i, axis_num;
-                        "36";
+                        "45";
                         file = open("nacl_v1.csv", "w+");
-                        "37";
+                        "46";
                         file.write("#type,x,y,z,radius\n");
-                        "39";
+                        "48";
                         var RS_Iter1 = RS_Iterable(range(len(ra_item)));
                         for (var RS_Index1 = 0; RS_Index1["<"](RS_Iter1.length); RS_Index1++) {
                             i = RS_Iter1[RS_Index1];
-                            "41";
+                            "50";
                             file.write(str(0)["+"](",")["+"](str(ra_item[typeof i === "number" && i["<"](0) ? ra_item.length["+"](i) : i].pos.x))["+"](",")["+"](str(ra_item[typeof i === "number" && i["<"](0) ? ra_item.length["+"](i) : i].pos.y))["+"](",")["+"](str(ra_item[typeof i === "number" && i["<"](0) ? ra_item.length["+"](i) : i].pos.z))["+"](",")["+"](str(ra_item[typeof i === "number" && i["<"](0) ? ra_item.length["+"](i) : i].radius))["+"]("\n"));
                         }
-                        "43";
+                        "52";
                         var RS_Iter2 = RS_Iterable(range(len(rb_item)));
                         for (var RS_Index2 = 0; RS_Index2["<"](RS_Iter2.length); RS_Index2++) {
                             i = RS_Iter2[RS_Index2];
-                            "45";
+                            "54";
                             file.write(str(0)["+"](",")["+"](str(rb_item[typeof i === "number" && i["<"](0) ? rb_item.length["+"](i) : i].pos.x))["+"](",")["+"](str(rb_item[typeof i === "number" && i["<"](0) ? rb_item.length["+"](i) : i].pos.y))["+"](",")["+"](str(rb_item[typeof i === "number" && i["<"](0) ? rb_item.length["+"](i) : i].pos.z))["+"](",")["+"](str(rb_item[typeof i === "number" && i["<"](0) ? rb_item.length["+"](i) : i].radius))["+"]("\n"));
                         }
-                        "48";
+                        "57";
                         file.write("#type,x,y,z,axis\n");
-                        "49";
+                        "58";
                         var RS_Iter3 = RS_Iterable(range(len(cylinder_item)));
                         for (var RS_Index3 = 0; RS_Index3["<"](RS_Iter3.length); RS_Index3++) {
                             i = RS_Iter3[RS_Index3];
-                            "50";
+                            "59";
                             axis_num = axis_number(cylinder_item[typeof i === "number" && i["<"](0) ? cylinder_item.length["+"](i) : i]);
-                            "52";
+                            "61";
                             file.write(str(1)["+"](",")["+"](str(cylinder_item[typeof i === "number" && i["<"](0) ? cylinder_item.length["+"](i) : i].pos.x))["+"](",")["+"](str(cylinder_item[typeof i === "number" && i["<"](0) ? cylinder_item.length["+"](i) : i].pos.y))["+"](",")["+"](str(cylinder_item[typeof i === "number" && i["<"](0) ? cylinder_item.length["+"](i) : i].pos.z))["+"](",")["+"](str(axis_num))["+"]("\n"));
                         }
-                        "53";
+                        "62";
                         file.close();
                     };
 
                     print_csv = function print_csv() {
                         var RS_ls, string_list, i, axis_num;
-                        "56";
-                        "57";
-                        "59";
-                        if (it5.text !== "None" && (_typeof(it5.text) !== "object" || RS_not_equals(it5.text, "None"))) {
-                                "60";
-                                it5.remove();
+                        "65";
+                        "66";
+                        "68";
+                        if (it8.text !== "None" && (_typeof(it8.text) !== "object" || RS_not_equals(it8.text, "None"))) {
+                                "69";
+                                del_csv();
                             }
-                        "70";
+                        "79";
                         string_list = RS_list_decorate([]);
-                        "71";
+                        "80";
                         string_list.append("<p style=\"border:3px; border-style:solid; border-color:#000000; padding: 1em; background-color:grey; font-family:Courier New\">");
-                        "72";
+                        "81";
                         string_list.append("#type,x,y,z,radius\n");
-                        "75";
+                        "84";
                         var RS_Iter4 = RS_Iterable(range(len(ra_item)));
                         for (var RS_Index4 = 0; RS_Index4["<"](RS_Iter4.length); RS_Index4++) {
                             i = RS_Iter4[RS_Index4];
-                            "76";
+                            "85";
                             string_list.append(str(0)["+"](",")["+"](str(ra_item[typeof i === "number" && i["<"](0) ? ra_item.length["+"](i) : i].pos.x))["+"](",")["+"](str(ra_item[typeof i === "number" && i["<"](0) ? ra_item.length["+"](i) : i].pos.y))["+"](",")["+"](str(ra_item[typeof i === "number" && i["<"](0) ? ra_item.length["+"](i) : i].pos.z))["+"](",")["+"](str(ra_item[typeof i === "number" && i["<"](0) ? ra_item.length["+"](i) : i].radius))["+"]("\n"));
                         }
-                        "78";
+                        "87";
                         var RS_Iter5 = RS_Iterable(range(len(rb_item)));
                         for (var RS_Index5 = 0; RS_Index5["<"](RS_Iter5.length); RS_Index5++) {
                             i = RS_Iter5[RS_Index5];
-                            "79";
+                            "88";
                             string_list.append(str(0)["+"](",")["+"](str(rb_item[typeof i === "number" && i["<"](0) ? rb_item.length["+"](i) : i].pos.x))["+"](",")["+"](str(rb_item[typeof i === "number" && i["<"](0) ? rb_item.length["+"](i) : i].pos.y))["+"](",")["+"](str(rb_item[typeof i === "number" && i["<"](0) ? rb_item.length["+"](i) : i].pos.z))["+"](",")["+"](str(rb_item[typeof i === "number" && i["<"](0) ? rb_item.length["+"](i) : i].radius))["+"]("\n"));
                         }
-                        "82";
+                        "91";
                         string_list.append("#type,x,y,z,axis,length\n");
-                        "83";
+                        "92";
                         var RS_Iter6 = RS_Iterable(range(len(cylinder_item)));
                         for (var RS_Index6 = 0; RS_Index6["<"](RS_Iter6.length); RS_Index6++) {
                             i = RS_Iter6[RS_Index6];
-                            "84";
+                            "93";
                             axis_num = axis_number(cylinder_item[typeof i === "number" && i["<"](0) ? cylinder_item.length["+"](i) : i]);
-                            "85";
+                            "94";
                             string_list.append(str(1)["+"](",")["+"](str(cylinder_item[typeof i === "number" && i["<"](0) ? cylinder_item.length["+"](i) : i].pos.x))["+"](",")["+"](str(cylinder_item[typeof i === "number" && i["<"](0) ? cylinder_item.length["+"](i) : i].pos.y))["+"](",")["+"](str(cylinder_item[typeof i === "number" && i["<"](0) ? cylinder_item.length["+"](i) : i].pos.z))["+"](",")["+"](str(axis_num))["+"]("\n"));
                         }
-                        "87";
+                        "96";
                         string_list.append("<\/p>");
-                        "88";
+                        "97";
                         string = "".join(string_list);
-                        "89";
-                        it5 = RS_interpolate_kwargs.call(this, wtext, [RS_desugar_kwargs({ text: string })]);
+                        "98";
+                        it8 = RS_interpolate_kwargs.call(this, wtext, [RS_desugar_kwargs({ text: string })]);
                     };
 
                     del_csv = function del_csv() {
                         var RS_ls;
-                        "92";
-                        "93";
-                        it5.text = "";
+                        "102";
+                        "104";
+                        it8.text = "";
                     };
 
                     build = function build(L, ra, rb, ra_item, rb_item, cylinder_item, total_item) {
                         var RS_ls, b, k, j, i;
-                        "99";
+                        "111";
                         for (var RS_Index7 = L["-u"]()["+"](1); RS_Index7["<"](L["+"](1)); RS_Index7++) {
                             i = RS_Index7;
-                            "100";
+                            "112";
                             for (var RS_Index8 = L["-u"]()["+"](1); RS_Index8["<"](L["+"](1)); RS_Index8++) {
                                 j = RS_Index8;
-                                "101";
+                                "113";
                                 for (var RS_Index9 = L["-u"]()["+"](1); RS_Index9["<"](L["+"](1)); RS_Index9++) {
                                     k = RS_Index9;
-                                    "102";
+                                    "114";
                                     if (RS_equals(i["+"](j)["+"](k) % 2, 0)) {
-                                            "103";
+                                            "115";
                                             b = RS_interpolate_kwargs.call(this, sphere, [RS_desugar_kwargs({ pos: vector(i["-"](.5), j["-"](.5), k["-"](.5)), radius: ra, color: color.magenta })]);
-                                            "104";
+                                            "116";
                                             ra_item.append(b);
-                                            "105";
+                                            "117";
                                         } else {
-                                            "106";
+                                            "118";
                                             b = RS_interpolate_kwargs.call(this, sphere, [RS_desugar_kwargs({ pos: vector(i["-"](.5), j["-"](.5), k["-"](.5)), radius: rb, color: color.green })]);
-                                            "107";
+                                            "119";
                                             rb_item.append(b);
                                         }
-                                    "108";
+                                    "120";
                                     if (i["+"](1)["<="](L)) {
-                                            "109";
+                                            "121";
                                             b = RS_interpolate_kwargs.call(this, cylinder, [RS_desugar_kwargs({ pos: vector(i["-"](.5), j["-"](.5), k["-"](.5)), axis: vector(1, 0, 0), radius: .01, color: color.white })]);
-                                            "110";
+                                            "122";
                                             cylinder_item.append(b);
                                         }
-                                    "111";
+                                    "123";
                                     if (j["+"](1)["<="](L)) {
-                                            "112";
+                                            "124";
                                             b = RS_interpolate_kwargs.call(this, cylinder, [RS_desugar_kwargs({ pos: vector(i["-"](.5), j["-"](.5), k["-"](.5)), axis: vector(0, 1, 0), radius: .01, color: color.white })]);
-                                            "113";
+                                            "125";
                                             cylinder_item.append(b);
                                         }
-                                    "114";
+                                    "126";
                                     if (k["+"](1)["<="](L)) {
-                                            "115";
+                                            "127";
                                             b = RS_interpolate_kwargs.call(this, cylinder, [RS_desugar_kwargs({ pos: vector(i["-"](.5), j["-"](.5), k["-"](.5)), axis: vector(0, 0, 1), radius: .01, color: color.white })]);
-                                            "116";
+                                            "128";
                                             cylinder_item.append(b);
                                         }
                                 }
                             }
                         }
-                        "117";
+                        "129";
                         total_item = ra_item["+"](rb_item)["+"](cylinder_item);
-                        "119";
+                        "131";
                         return [ra_item, rb_item, cylinder_item, total_item];
                     };
 
                     build_button = function build_button(s) {
                         var RS_ls;
-                        "122";
-                        "123";
-                        "124";
-                        "125";
-                        "126";
-                        "127";
+                        "134";
+                        "135";
+                        "136";
+                        "137";
+                        "138";
+                        "139";
                         running = !running;
-                        "128";
+                        "140";
                         if (running) {
                                 s.text = "Pause";
                             } else {
@@ -198,69 +198,69 @@ var main = _streamline.async(regeneratorRuntime.mark(function _$$main$$(_2) {
 
                     clear = function clear() {
                         var RS_ls, i;
-                        "134";
+                        "146";
                         var RS_Iter10 = RS_Iterable(ra_item);
                         for (var RS_Index10 = 0; RS_Index10["<"](RS_Iter10.length); RS_Index10++) {
                             i = RS_Iter10[RS_Index10];
-                            "135";
+                            "147";
                             i.visible = false;
-                            "136";
+                            "148";
                             i = undefined;
                         }
-                        "137";
+                        "149";
                         var RS_Iter11 = RS_Iterable(rb_item);
                         for (var RS_Index11 = 0; RS_Index11["<"](RS_Iter11.length); RS_Index11++) {
                             i = RS_Iter11[RS_Index11];
-                            "138";
+                            "150";
                             i.visible = false;
-                            "139";
+                            "151";
                             i = undefined;
                         }
-                        "140";
+                        "152";
                         var RS_Iter12 = RS_Iterable(cylinder_item);
                         for (var RS_Index12 = 0; RS_Index12["<"](RS_Iter12.length); RS_Index12++) {
                             i = RS_Iter12[RS_Index12];
-                            "141";
+                            "153";
                             i.visible = false;
-                            "142";
+                            "154";
                             i = undefined;
                         }
                     };
 
                     reset = function reset() {
                         var RS_ls, i, RS_unpack;
-                        "146";
-                        "147";
-                        "148";
-                        "149";
-                        "150";
+                        "158";
+                        "159";
+                        "160";
+                        "161";
+                        "162";
                         var RS_Iter13 = RS_Iterable(ra_item);
                         for (var RS_Index13 = 0; RS_Index13["<"](RS_Iter13.length); RS_Index13++) {
                             i = RS_Iter13[RS_Index13];
-                            "151";
+                            "163";
                             i.visible = false;
-                            "152";
+                            "164";
                             i = undefined;
                         }
-                        "153";
+                        "165";
                         var RS_Iter14 = RS_Iterable(rb_item);
                         for (var RS_Index14 = 0; RS_Index14["<"](RS_Iter14.length); RS_Index14++) {
                             i = RS_Iter14[RS_Index14];
-                            "154";
+                            "166";
                             i.visible = false;
-                            "155";
+                            "167";
                             i = undefined;
                         }
-                        "156";
+                        "168";
                         var RS_Iter15 = RS_Iterable(cylinder_item);
                         for (var RS_Index15 = 0; RS_Index15["<"](RS_Iter15.length); RS_Index15++) {
                             i = RS_Iter15[RS_Index15];
-                            "157";
+                            "169";
                             i.visible = false;
-                            "158";
+                            "170";
                             i = undefined;
                         }
-                        "159";
+                        "171";
                         RS_unpack = build(L, ra, rb, ra_item, rb_item, cylinder_item, total_item);
                         RS_unpack = RS_unpack_asarray(4, RS_unpack);
                         ra_item = RS_unpack[0];
@@ -271,75 +271,101 @@ var main = _streamline.async(regeneratorRuntime.mark(function _$$main$$(_2) {
 
                     set_bondab = function set_bondab(s) {
                         var RS_ls, bond_ab, ra, rb, x, y;
-                        "163";
+                        "175";
                         bond_ab = s.number;
-                        "164";
-                        ra = ra_int["/"](2)["/"](bond_ab)["*"](1);
-                        "165";
-                        rb = rb_int["/"](2)["/"](bond_ab)["*"](1);
-                        "166";
+                        "176";
+                        ra = ra_int["/"](bond_ab)["*"](1)["*"](scale_factor);
+                        "177";
+                        rb = rb_int["/"](bond_ab)["*"](1)["*"](scale_factor);
+                        "178";
                         var RS_Iter16 = RS_Iterable(ra_item);
                         for (var RS_Index16 = 0; RS_Index16["<"](RS_Iter16.length); RS_Index16++) {
                             x = RS_Iter16[RS_Index16];
-                            "167";
+                            "179";
                             x.radius = ra;
                         }
-                        "168";
+                        "180";
                         var RS_Iter17 = RS_Iterable(rb_item);
                         for (var RS_Index17 = 0; RS_Index17["<"](RS_Iter17.length); RS_Index17++) {
                             y = RS_Iter17[RS_Index17];
-                            "169";
+                            "181";
                             y.radius = rb;
                         }
-                        "170";
+                        "182";
                         return bond_ab;
                     };
 
                     set_ra = function set_ra(s) {
                         var RS_ls, ra_int, ra, x;
-                        "174";
+                        "186";
                         ra_int = s.number;
-                        "175";
-                        ra = ra_int["/"](2)["/"](bond_ab)["*"](1);
-                        "176";
+                        "187";
+                        ra = ra_int["/"](bond_ab)["*"](1)["*"](scale_factor);
+                        "188";
                         var RS_Iter18 = RS_Iterable(ra_item);
                         for (var RS_Index18 = 0; RS_Index18["<"](RS_Iter18.length); RS_Index18++) {
                             x = RS_Iter18[RS_Index18];
-                            "177";
+                            "189";
                             x.radius = ra;
                         }
-                        "178";
+                        "190";
                         return ra;
                     };
 
                     set_rb = function set_rb(s) {
                         var RS_ls, rb_int, rb, y;
-                        "181";
+                        "193";
                         rb_int = s.number;
-                        "182";
-                        rb = rb_int["/"](2)["/"](bond_ab)["*"](1);
-                        "183";
+                        "194";
+                        rb = rb_int["/"](bond_ab)["*"](1)["*"](scale_factor);
+                        "195";
                         var RS_Iter19 = RS_Iterable(rb_item);
                         for (var RS_Index19 = 0; RS_Index19["<"](RS_Iter19.length); RS_Index19++) {
                             y = RS_Iter19[RS_Index19];
-                            "184";
+                            "196";
                             y.radius = rb;
                         }
-                        "185";
+                        "197";
                         return rb;
+                    };
+
+                    set_scale_factor = function set_scale_factor(s) {
+                        var RS_ls, scale_factor, ra, rb, x, y;
+                        "201";
+                        scale_factor = s.number;
+                        "202";
+                        ra = ra_int["/"](bond_ab)["*"](1)["*"](scale_factor);
+                        "203";
+                        rb = rb_int["/"](bond_ab)["*"](1)["*"](scale_factor);
+                        "204";
+                        var RS_Iter20 = RS_Iterable(ra_item);
+                        for (var RS_Index20 = 0; RS_Index20["<"](RS_Iter20.length); RS_Index20++) {
+                            x = RS_Iter20[RS_Index20];
+                            "205";
+                            x.radius = ra;
+                        }
+                        "206";
+                        var RS_Iter21 = RS_Iterable(rb_item);
+                        for (var RS_Index21 = 0; RS_Index21["<"](RS_Iter21.length); RS_Index21++) {
+                            y = RS_Iter21[RS_Index21];
+                            "207";
+                            y.radius = rb;
+                        }
+                        "208";
+                        return [scale_factor, ra, rb];
                     };
 
                     set_L = function set_L(s) {
                         var RS_ls, L, RS_unpack;
-                        "188";
-                        "189";
-                        "190";
-                        "191";
-                        "192";
+                        "212";
+                        "213";
+                        "214";
+                        "215";
+                        "216";
                         L = s.number;
-                        "193";
+                        "217";
                         clear();
-                        "194";
+                        "218";
                         RS_unpack = build(L, ra, rb, ra_item, rb_item, cylinder_item, total_item);
                         RS_unpack = RS_unpack_asarray(4, RS_unpack);
                         ra_item = RS_unpack[0];
@@ -383,173 +409,199 @@ var main = _streamline.async(regeneratorRuntime.mark(function _$$main$$(_2) {
                     "9";
                     L = 1;
                     "10";
-                    bond_ab = 2.7266;
+                    bond_ab = 2.83;
                     "11";
-                    ra_int = .99;
+                    ra_int = 1.16;
                     "12";
-                    rb_int = 1.91;
+                    rb_int = 1.67;
                     "14";
-                    ra = ra_int["/"](2)["/"](bond_ab)["*"](1);
+                    bond_default_text = str(bond_ab);
                     "15";
-                    rb = rb_int["/"](2)["/"](bond_ab)["*"](1);
-                    "17";
-                    ra_item = RS_list_decorate([]);
+                    ra_default_text = str(ra_int);
+                    "16";
+                    rb_default_text = str(rb_int);
                     "18";
-                    rb_item = RS_list_decorate([]);
+                    scale_factor = .5;
                     "19";
-                    cylinder_item = RS_list_decorate([]);
-                    "20";
-                    total_item = RS_list_decorate([]);
-                    "21";
-                    running = false;
+                    scale_default_text = str(scale_factor);
+                    "22";
+                    ra = ra_int["/"](bond_ab)["*"](1)["*"](scale_factor);
                     "23";
+                    rb = rb_int["/"](bond_ab)["*"](1)["*"](scale_factor);
+                    "26";
+                    ra_item = RS_list_decorate([]);
+                    "27";
+                    rb_item = RS_list_decorate([]);
+                    "28";
+                    cylinder_item = RS_list_decorate([]);
+                    "29";
+                    total_item = RS_list_decorate([]);
+                    "30";
+                    running = false;
+                    "32";
                     ;
                     if (!axis_number.__argnames__) Object.defineProperties(axis_number, {
                         __argnames__: { value: ["cylinder"] }
                     });
 
-                    "35";
+                    "44";
                     ;
 
-                    "55";
+                    "64";
                     ;
 
-                    "91";
+                    "101";
                     ;
 
-                    "97";
+                    "109";
                     ;
                     if (!build.__argnames__) Object.defineProperties(build, {
                         __argnames__: { value: ["L", "ra", "rb", "ra_item", "rb_item", "cylinder_item", "total_item"] }
                     });
 
-                    "121";
+                    "133";
                     ;
                     if (!build_button.__argnames__) Object.defineProperties(build_button, {
                         __argnames__: { value: ["s"] }
                     });
 
-                    "133";
-                    ;
-
                     "145";
                     ;
 
-                    "162";
+                    "157";
+                    ;
+
+                    "174";
                     ;
                     if (!set_bondab.__argnames__) Object.defineProperties(set_bondab, {
                         __argnames__: { value: ["s"] }
                     });
 
-                    "173";
+                    "185";
                     ;
                     if (!set_ra.__argnames__) Object.defineProperties(set_ra, {
                         __argnames__: { value: ["s"] }
                     });
 
-                    "180";
+                    "192";
                     ;
                     if (!set_rb.__argnames__) Object.defineProperties(set_rb, {
                         __argnames__: { value: ["s"] }
                     });
 
-                    "187";
+                    "200";
+                    ;
+                    if (!set_scale_factor.__argnames__) Object.defineProperties(set_scale_factor, {
+                        __argnames__: { value: ["s"] }
+                    });
+
+                    "211";
                     ;
                     if (!set_L.__argnames__) Object.defineProperties(set_L, {
                         __argnames__: { value: ["s"] }
                     });
 
-                    "199";
+                    "223";
                     RS_unpack = build(L, ra, rb, ra_item, rb_item, cylinder_item, total_item);
                     RS_unpack = RS_unpack_asarray(4, RS_unpack);
                     ra_item = RS_unpack[0];
                     rb_item = RS_unpack[1];
                     cylinder_item = RS_unpack[2];
                     total_item = RS_unpack[3];
-                    "204";
-                    RS_interpolate_kwargs.call(this, wtext, [RS_desugar_kwargs({ text: "<h2>FCC Lattice Example: Sodium Chloride (NaCl)</h2><hr>", pos: scene5.title_anchor })]);
-                    "207";
-                    RS_interpolate_kwargs.call(this, wtext, [RS_desugar_kwargs({ text: "Sodium Cloride, occurs natually as white crystals of salt, is an ionic compound with the chemical symbol\n\\(NaCl \\). It is composed of two types of elements (Sodium and Chloride) forming Face Center Cubic (FCC) \nlattice structure by repeating each cubic unit cell.\n\n", pos: scene5.title_anchor })]);
-                    "213";
-                    RS_interpolate_kwargs.call(this, wtext, [RS_desugar_kwargs({ text: "<h3>Control</h3><ul><li><b>Rotate</b>: Right Button drag or Ctrl-drag</li><li><b>Zoom</b>: Drag with middle button or use scroll wheel</li></ul>", pos: scene5.title_anchor })]);
-                    "221";
-                    RS_interpolate_kwargs.call(this, wtext, [RS_desugar_kwargs({ text: "<h3>Modifying Structure</h3><ul><li><b>L</b>: Number of Unit Cells(Integer Only)</li><li><b>bond_ab</b>: Lattice Constant(\\(   \\unicode{x212B}   \\))(1\\(   \\unicode{x212B}   \\) = \\(10^{-10} \\)meter)</li><li><b><font color = \"Purple\">r_a<font color = \"Black\"></b>: Atomic Radius of Sodium [<font color =\"Purple\">Purple<font color =\"black\">] (\\(   \\unicode{x212B}   \\))</li><li><b><font color = \"Green\">r_b<font color = \"Black\"></b>: Atomic Radius of Chloride [<font color =\"Green\">Green<font color =\"black\">] (\\(   \\unicode{x212B}   \\))</li></ul>", pos: scene5.title_anchor })]);
-                    "223";
-                    RS_interpolate_kwargs.call(this, wtext, [RS_desugar_kwargs({ text: "<hr>", pos: scene5.title_anchor })]);
-                    "225";
-                    it0 = RS_interpolate_kwargs.call(this, wtext, [RS_desugar_kwargs({ text: "<h5>Parameters:</h5>Adjust the lattice constants below to construct another FCC material.\nPress <b>Enter key</b> after <b>every</b> changes to take effect.\n" })]);
-                    "229";
-                    b1 = RS_interpolate_kwargs.call(this, button, [RS_desugar_kwargs({ text: "Run", pos: scene5.title_anchor, bind: build_button })]);
-                    "230";
-                    b2 = RS_interpolate_kwargs.call(this, button, [RS_desugar_kwargs({ text: "Reset", pos: scene5.title_anchor, bind: reset })]);
+                    "228";
+                    RS_interpolate_kwargs.call(this, wtext, [RS_desugar_kwargs({ text: "<h2>fcc Lattice Example: Sodium Chloride (NaCl)</h2><hr>", pos: scene5.title_anchor })]);
                     "233";
-                    it1 = RS_interpolate_kwargs.call(this, wtext, [RS_desugar_kwargs({ text: "L: " })]);
-                    "234";
-                    ib1 = RS_interpolate_kwargs.call(this, winput, [RS_desugar_kwargs({ type: "numeric", pos: scene5.caption_anchor, bind: set_L, text: 1 })]);
+                    RS_interpolate_kwargs.call(this, wtext, [RS_desugar_kwargs({ text: "Sodium Chloride, occurs natually as white crystals of salt, is an ionic compound with the \nchemical symbol \\(NaCl \\). It consists of two types of ions: sodium ions and chloride ions which \nalternate with each other in each of the three dimensions. The repeating pattern is in a shape of of cube,\nand there are lattice points on the faces of the cube. Such a sytems is called the face-centered cubic (fcc) system. \n\n", pos: scene5.title_anchor })]);
                     "236";
-                    scene5.append_to_caption("\n");
-                    "238";
-                    it2 = RS_interpolate_kwargs.call(this, wtext, [RS_desugar_kwargs({ text: "bond_ab: " })]);
-                    "239";
-                    ib2 = RS_interpolate_kwargs.call(this, winput, [RS_desugar_kwargs({ type: "numeric", pos: scene5.caption_anchor, bind: set_bondab, text: 2.7266 })]);
-                    "241";
-                    RS_interpolate_kwargs.call(this, wtext, [RS_desugar_kwargs({ text: "(\\(   \\unicode{x212B}   \\))" })]);
+                    RS_interpolate_kwargs.call(this, wtext, [RS_desugar_kwargs({ text: "<b> This version of animation doesn't present the smallest repeating pattern, i.e. unit cell. \n</b>", pos: scene5.title_anchor })]);
                     "242";
-                    scene5.append_to_caption("\n");
-                    "244";
-                    it3 = RS_interpolate_kwargs.call(this, wtext, [RS_desugar_kwargs({ text: "ra: " })]);
-                    "245";
-                    ib3 = RS_interpolate_kwargs.call(this, winput, [RS_desugar_kwargs({ type: "numeric", pos: scene5.caption_anchor, bind: set_ra, text: .99 })]);
-                    "246";
-                    RS_interpolate_kwargs.call(this, wtext, [RS_desugar_kwargs({ text: "(\\(   \\unicode{x212B}   \\))" })]);
-                    "248";
-                    scene5.append_to_caption("\n");
+                    RS_interpolate_kwargs.call(this, wtext, [RS_desugar_kwargs({ text: "<h3>Control</h3><ul><li><b>Rotate</b>: Right Button drag or Ctrl-drag</li><li><b>Zoom</b>: Drag with middle button or use scroll wheel</li></ul>", pos: scene5.title_anchor })]);
                     "250";
-                    it4 = RS_interpolate_kwargs.call(this, wtext, [RS_desugar_kwargs({ text: "rb: " })]);
-                    "251";
-                    ib4 = RS_interpolate_kwargs.call(this, winput, [RS_desugar_kwargs({ type: "numeric", pos: scene5.caption_anchor, bind: set_rb, text: 1.91 })]);
+                    RS_interpolate_kwargs.call(this, wtext, [RS_desugar_kwargs({ text: "<h3>Structure Parameters</h3><ul><li><b>L</b>: Number of cells (Integer Only)</li><li><b>bond</b>: bond length </li><li><b><font color = \"Purple\">r_a<font color = \"Black\"></b>: Ironic radius of Sodium [<font color =\"Purple\">Purple<font color =\"black\">] </li><li><b><font color = \"Green\">r_b<font color = \"Black\"></b>: Ironic Radius of Chloride [<font color =\"Green\">Green<font color =\"black\">] </li></ul>", pos: scene5.title_anchor })]);
                     "252";
-                    RS_interpolate_kwargs.call(this, wtext, [RS_desugar_kwargs({ text: "(\\(   \\unicode{x212B}   \\))" })]);
+                    RS_interpolate_kwargs.call(this, wtext, [RS_desugar_kwargs({ text: "<hr>", pos: scene5.title_anchor })]);
                     "254";
-                    scene5.append_to_caption("\n\n");
+                    it0 = RS_interpolate_kwargs.call(this, wtext, [RS_desugar_kwargs({ text: "<h5>Parameters:</h5>Adjust the lattice constants below to construct another fcc material.\nPress <b>Enter key</b> after <b>every</b> change to take effect.\n" })]);
+                    "260";
+                    b1 = RS_interpolate_kwargs.call(this, button, [RS_desugar_kwargs({ text: "Run", pos: scene5.title_anchor, bind: build_button })]);
+                    "261";
+                    b2 = RS_interpolate_kwargs.call(this, button, [RS_desugar_kwargs({ text: "Reset", pos: scene5.title_anchor, bind: reset })]);
+                    "265";
+                    it1 = RS_interpolate_kwargs.call(this, wtext, [RS_desugar_kwargs({ text: "L: " })]);
+                    "266";
+                    ib1 = RS_interpolate_kwargs.call(this, winput, [RS_desugar_kwargs({ type: "numeric", pos: scene5.caption_anchor, bind: set_L, text: 1 })]);
                     "268";
-                    ib5 = RS_interpolate_kwargs.call(this, button, [RS_desugar_kwargs({ bind: print_csv, text: "Generate CSV for STL conversion" })]);
-                    "269";
-                    ib6 = RS_interpolate_kwargs.call(this, button, [RS_desugar_kwargs({ bind: del_csv, text: "Remove CSV Box" })]);
+                    scene5.append_to_caption("\n");
                     "270";
-                    scene5.append_to_caption("\n\n\n");
+                    it2 = RS_interpolate_kwargs.call(this, wtext, [RS_desugar_kwargs({ text: "bond: " })]);
                     "271";
-                    it5 = RS_interpolate_kwargs.call(this, wtext, [RS_desugar_kwargs({ text: "" })]);
+                    ib2 = RS_interpolate_kwargs.call(this, winput, [RS_desugar_kwargs({ type: "numeric", pos: scene5.caption_anchor, bind: set_bondab, text: bond_default_text })]);
                     "273";
+                    RS_interpolate_kwargs.call(this, wtext, [RS_desugar_kwargs({ text: "\\(   \\unicode{x212B}   \\)" })]);
+                    "274";
+                    scene5.append_to_caption("\n");
+                    "277";
+                    it3 = RS_interpolate_kwargs.call(this, wtext, [RS_desugar_kwargs({ text: "ra: " })]);
+                    "278";
+                    ib3 = RS_interpolate_kwargs.call(this, winput, [RS_desugar_kwargs({ type: "numeric", pos: scene5.caption_anchor, bind: set_ra, text: ra_default_text })]);
+                    "279";
+                    RS_interpolate_kwargs.call(this, wtext, [RS_desugar_kwargs({ text: "\\(   \\unicode{x212B}   \\)" })]);
+                    "281";
+                    scene5.append_to_caption("\n");
+                    "284";
+                    it4 = RS_interpolate_kwargs.call(this, wtext, [RS_desugar_kwargs({ text: "rb: " })]);
+                    "285";
+                    ib4 = RS_interpolate_kwargs.call(this, winput, [RS_desugar_kwargs({ type: "numeric", pos: scene5.caption_anchor, bind: set_rb, text: rb_default_text })]);
+                    "286";
+                    RS_interpolate_kwargs.call(this, wtext, [RS_desugar_kwargs({ text: "\\(   \\unicode{x212B}   \\)" })]);
+                    "287";
+                    scene5.append_to_caption("\n");
+                    "291";
+                    it5 = RS_interpolate_kwargs.call(this, wtext, [RS_desugar_kwargs({ text: "scale: " })]);
+                    "292";
+                    ib5 = RS_interpolate_kwargs.call(this, winput, [RS_desugar_kwargs({ type: "numeric", pos: scene5.caption_anchor, bind: set_scale_factor, text: scale_default_text })]);
+                    "293";
+                    RS_interpolate_kwargs.call(this, wtext, [RS_desugar_kwargs({ text: "( Must be less than or equal to 1. A value less than 1 is used for an exploded view. )" })]);
+                    "298";
+                    scene5.append_to_caption("\n\n");
+                    "312";
+                    ib6 = RS_interpolate_kwargs.call(this, button, [RS_desugar_kwargs({ bind: print_csv, text: "Generate CSV for STL conversion" })]);
+                    "313";
+                    ib7 = RS_interpolate_kwargs.call(this, button, [RS_desugar_kwargs({ bind: del_csv, text: "Remove CSV Box" })]);
+                    "315";
+                    scene5.append_to_caption("\n\n\n");
+                    "316";
+                    it8 = RS_interpolate_kwargs.call(this, wtext, [RS_desugar_kwargs({ text: "" })]);
+                    "320";
                     MathJax.Hub.Queue(RS_list_decorate(["Typeset", MathJax.Hub]));
-                    "276";
+                    "323";
 
-                case 154:
+                case 178:
                     if (!true) {
-                            _context.next = 162;
+                            _context.next = 186;
                             break;
                         }
 
-                    "277";
-                    _context.next = 158;
-                    return _streamline.await(_filename, 514, null, rate, 1, null, false, [100, true]);
+                    "324";
+                    _context.next = 182;
+                    return _streamline.await(_filename, 564, null, rate, 1, null, false, [100, true]);
 
-                case 158:
-                    "278";
+                case 182:
+                    "325";
                     if (running) {
-                            "279";
-                            RS_Iter20 = RS_Iterable(total_item);
+                            "326";
+                            RS_Iter22 = RS_Iterable(total_item);
 
-                            for (RS_Index20 = 0; RS_Index20["<"](RS_Iter20.length); RS_Index20++) {
-                                b = RS_Iter20[RS_Index20];
-                                "280";
+                            for (RS_Index22 = 0; RS_Index22["<"](RS_Iter22.length); RS_Index22++) {
+                                b = RS_Iter22[RS_Index22];
+                                "327";
                                 RS_interpolate_kwargs.call(b, b.rotate, [RS_desugar_kwargs({ angle: .01, axis: vector(0, 1, 0), origin: vector(0, 0, 0) })]);
                             }
                         }
-                    _context.next = 154;
+                    _context.next = 178;
                     break;
 
-                case 162:
+                case 186:
                 case "end":
                     return _context.stop();
             }
@@ -558,7 +610,7 @@ var main = _streamline.async(regeneratorRuntime.mark(function _$$main$$(_2) {
 }), 0, 1);
 
 var RS_modules = {};
-var string, it5, ra_item, rb_item, cylinder_item, total_item, running;
+var string, it8, ra_item, rb_item, cylinder_item, total_item, running;
 RS_modules.pythonize = {};
 
 (function () {
