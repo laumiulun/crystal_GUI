@@ -1,3 +1,4 @@
+
 // START JAVASCRIPT
 ;(function() {"use strict";
 
@@ -8,7 +9,7 @@ var _streamline = typeof srequire === 'function' ? srequire("streamline-runtime/
 var _filename = "unknown";
 
 var main = _streamline.async(regeneratorRuntime.mark(function _$$main$$(_2) {
-    var build, build_button, clear, reset, set_bondab, set_ra, set_rb, set_ro, set_L, version, box, sphere, simple_sphere, cylinder, pyramid, cone, helix, ellipsoid, ring, arrow, compound, display, vector, print, type, scene, RS_ls, scene5, L, bond_ab, ra_int, rb_int, ro_int, ra, rb, ro, ra_item, rb_item, ro_item, cylinder_item, total_item, running, opatom, opbar, RS_unpack, b1, b2, it0, it1, ib1, it2, ib2, it3, ib3, it4, ib4, it5, ib5, b, __name__, strings, RS_Iter18, RS_Index18;
+    var build, build_button, clear, reset, set_bondab, set_ra, set_rb, set_ro, set_scale_factor, set_L, version, box, sphere, simple_sphere, cylinder, pyramid, cone, helix, ellipsoid, ring, arrow, compound, display, vector, print, type, scene, RS_ls, scene5, L, bond_ab, ra_int, rb_int, ro_int, bond_default_text, ra_default_text, rb_default_text, ro_default_text, scale_factor, scale_default_text, ra, rb, ro, ra_item, rb_item, ro_item, cylinder_item, total_item, running, opatom, opbar, RS_unpack, b1, b2, it0, it1, ib1, it2, ib2, it3, ib3, it4, ib4, it5, ib5, it6, ib6, b, __name__, strings, RS_Iter21, RS_Index21;
 
     return regeneratorRuntime.wrap(function _$$main$$$(_context) {
         while (1) {
@@ -16,114 +17,114 @@ var main = _streamline.async(regeneratorRuntime.mark(function _$$main$$(_2) {
                 case 0:
                     build = function build(L, ra, rb, ra_item, rb_item, ro_item, cylinder_item, total_item) {
                         var RS_ls, L1, LB, LN1, v0, b, na, v, x, m, k, j, i;
-                        "32";
+                        "48";
                         L1 = L;
-                        "33";
+                        "49";
                         LB = L["-"](1);
-                        "34";
+                        "50";
                         LN1 = L["-"](1);
-                        "36";
+                        "52";
                         for (var RS_Index1 = L["-u"](); RS_Index1["<"](L1); RS_Index1++) {
                             i = RS_Index1;
-                            "37";
+                            "53";
                             for (var RS_Index2 = L["-u"](); RS_Index2["<"](L1); RS_Index2++) {
                                 j = RS_Index2;
-                                "38";
+                                "54";
                                 for (var RS_Index3 = L["-u"](); RS_Index3["<"](L1); RS_Index3++) {
                                     k = RS_Index3;
-                                    "40";
+                                    "56";
                                     for (var RS_Index4 = 1["-u"](); RS_Index4["<"](0); RS_Index4++) {
                                         na = RS_Index4;
-                                        "41";
+                                        "57";
                                         v0 = vector(i["+"](1["/"](2)["*"](na)), j["+"](1["/"](2)["*"](na)), k["+"](1["/"](2)["*"](na)));
-                                        "42";
+                                        "58";
                                         b = RS_interpolate_kwargs.call(this, sphere, [RS_desugar_kwargs({ pos: v0, radius: ra, color: color.green, opacity: opatom })]);
-                                        "43";
+                                        "59";
                                         ra_item.append(b);
-                                        "44";
+                                        "60";
                                         if (i["<"](LN1)) {
-                                                "45";
+                                                "61";
                                                 b = RS_interpolate_kwargs.call(this, cylinder, [RS_desugar_kwargs({ pos: v0, axis: vector(1, 0, 0), radius: .01, color: color.white, opacity: opbar })]);
-                                                "46";
+                                                "62";
                                                 cylinder_item.append(b);
                                             }
-                                        "47";
+                                        "63";
                                         if (j["<"](LN1)) {
-                                                "48";
+                                                "64";
                                                 b = RS_interpolate_kwargs.call(this, cylinder, [RS_desugar_kwargs({ pos: v0, axis: vector(0, 1, 0), radius: .01, color: color.white, opacity: opbar })]);
-                                                "49";
+                                                "65";
                                                 cylinder_item.append(b);
                                             }
-                                        "50";
+                                        "66";
                                         if (k["<"](LN1)) {
-                                                "51";
+                                                "67";
                                                 b = RS_interpolate_kwargs.call(this, cylinder, [RS_desugar_kwargs({ pos: v0, axis: vector(0, 0, 1), radius: .01, color: color.white, opacity: opbar })]);
-                                                "52";
+                                                "68";
                                                 cylinder_item.append(b);
                                             }
                                     }
-                                    "54";
+                                    "70";
                                     if (i["<"](LB) && j["<"](LB) && k["<"](LB)) {
-                                            "55";
+                                            "71";
                                             b = RS_interpolate_kwargs.call(this, sphere, [RS_desugar_kwargs({ pos: vector(i, j, k), radius: rb, color: vector(0, .7, 1), opacity: opatom })]);
-                                            "56";
+                                            "72";
                                             rb_item.append(b);
-                                            "58";
+                                            "74";
                                             v = RS_list_decorate([vector(i["-"](1["/"](2)), j, k), vector(i["+"](1["/"](2)), j, k), vector(i, j["-"](1["/"](2)), k), vector(i, j["+"](1["/"](2)), k), vector(i, j, k["-"](1["/"](2))), vector(i, j, k["+"](1["/"](2)))]);
-                                            "60";
+                                            "76";
                                             var RS_Iter5 = RS_Iterable(v);
                                             for (var RS_Index5 = 0; RS_Index5["<"](RS_Iter5.length); RS_Index5++) {
                                                 x = RS_Iter5[RS_Index5];
-                                                "61";
+                                                "77";
                                                 b = RS_interpolate_kwargs.call(this, sphere, [RS_desugar_kwargs({ pos: x, radius: ro, color: color.red, opacity: opatom })]);
-                                                "62";
+                                                "78";
                                                 ro_item.append(b);
                                             }
-                                            "63";
+                                            "79";
                                             for (var RS_Index6 = 2; RS_Index6["<"](6); RS_Index6++) {
                                                 m = RS_Index6;
-                                                "64";
+                                                "80";
                                                 b = RS_interpolate_kwargs.call(this, cylinder, [RS_desugar_kwargs({ pos: v[0], axis: v[typeof m === "number" && m["<"](0) ? v.length["+"](m) : m]["-"](v[0]), radius: .01, color: color.white, opacity: opbar })]);
-                                                "65";
+                                                "81";
                                                 cylinder_item.append(b);
-                                                "66";
+                                                "82";
                                                 b = RS_interpolate_kwargs.call(this, cylinder, [RS_desugar_kwargs({ pos: v[1], axis: v[typeof m === "number" && m["<"](0) ? v.length["+"](m) : m]["-"](v[1]), radius: .01, color: color.white, opacity: opbar })]);
-                                                "67";
+                                                "83";
                                                 cylinder_item.append(b);
                                             }
-                                            "68";
+                                            "84";
                                             for (var RS_Index7 = 4; RS_Index7["<"](6); RS_Index7++) {
                                                 m = RS_Index7;
-                                                "69";
+                                                "85";
                                                 b = RS_interpolate_kwargs.call(this, cylinder, [RS_desugar_kwargs({ pos: v[2], axis: v[typeof m === "number" && m["<"](0) ? v.length["+"](m) : m]["-"](v[2]), radius: .01, color: color.white, opacity: opbar })]);
-                                                "70";
+                                                "86";
                                                 cylinder_item.append(b);
-                                                "71";
+                                                "87";
                                                 b = RS_interpolate_kwargs.call(this, cylinder, [RS_desugar_kwargs({ pos: v[3], axis: v[typeof m === "number" && m["<"](0) ? v.length["+"](m) : m]["-"](v[3]), radius: .01, color: color.white, opacity: opbar })]);
-                                                "72";
+                                                "88";
                                                 cylinder_item.append(b);
                                             }
                                         }
                                 }
                             }
                         }
-                        "74";
+                        "90";
                         total_item = ra_item["+"](rb_item)["+"](ro_item)["+"](cylinder_item);
-                        "76";
+                        "92";
                         return [ra_item, rb_item, ro_item, cylinder_item, total_item];
                     };
 
                     build_button = function build_button(s) {
                         var RS_ls;
-                        "79";
-                        "80";
-                        "81";
-                        "82";
-                        "83";
-                        "84";
-                        "85";
+                        "95";
+                        "96";
+                        "97";
+                        "98";
+                        "99";
+                        "100";
+                        "101";
                         running = !running;
-                        "86";
+                        "102";
                         if (running) {
                                 s.text = "Pause";
                             } else {
@@ -133,54 +134,54 @@ var main = _streamline.async(regeneratorRuntime.mark(function _$$main$$(_2) {
 
                     clear = function clear() {
                         var RS_ls, i;
-                        "92";
+                        "108";
                         var RS_Iter8 = RS_Iterable(ra_item);
                         for (var RS_Index8 = 0; RS_Index8["<"](RS_Iter8.length); RS_Index8++) {
                             i = RS_Iter8[RS_Index8];
-                            "93";
+                            "109";
                             i.visible = false;
-                            "94";
+                            "110";
                             i = undefined;
                         }
-                        "95";
+                        "111";
                         var RS_Iter9 = RS_Iterable(rb_item);
                         for (var RS_Index9 = 0; RS_Index9["<"](RS_Iter9.length); RS_Index9++) {
                             i = RS_Iter9[RS_Index9];
-                            "96";
+                            "112";
                             i.visible = false;
-                            "97";
+                            "113";
                             i = undefined;
                         }
-                        "98";
+                        "114";
                         var RS_Iter10 = RS_Iterable(ro_item);
                         for (var RS_Index10 = 0; RS_Index10["<"](RS_Iter10.length); RS_Index10++) {
                             i = RS_Iter10[RS_Index10];
-                            "99";
+                            "115";
                             i.visible = false;
-                            "100";
+                            "116";
                             i = undefined;
                         }
-                        "101";
+                        "117";
                         var RS_Iter11 = RS_Iterable(cylinder_item);
                         for (var RS_Index11 = 0; RS_Index11["<"](RS_Iter11.length); RS_Index11++) {
                             i = RS_Iter11[RS_Index11];
-                            "102";
+                            "118";
                             i.visible = false;
-                            "103";
+                            "119";
                             i = undefined;
                         }
                     };
 
                     reset = function reset() {
                         var RS_ls, RS_unpack;
-                        "107";
-                        "108";
-                        "109";
-                        "110";
-                        "111";
-                        "112";
+                        "123";
+                        "124";
+                        "125";
+                        "126";
+                        "127";
+                        "128";
                         clear();
-                        "113";
+                        "129";
                         RS_unpack = build(L, ra, rb, ra_item, rb_item, ro_item, cylinder_item, total_item);
                         RS_unpack = RS_unpack_asarray(5, RS_unpack);
                         ra_item = RS_unpack[0];
@@ -192,102 +193,137 @@ var main = _streamline.async(regeneratorRuntime.mark(function _$$main$$(_2) {
 
                     set_bondab = function set_bondab(s) {
                         var RS_ls, bond_ab, ra, rb, ro, x, y, z;
-                        "117";
+                        "133";
                         bond_ab = s.number;
-                        "118";
-                        ra = ra_int["/"](2)["/"](bond_ab)["*"](1);
-                        "119";
-                        rb = rb_int["/"](2)["/"](bond_ab)["*"](1);
-                        "120";
-                        ro = ro_int["/"](2)["/"](bond_ab)["*"](1);
-                        "121";
+                        "134";
+                        ra = ra_int["/"](bond_ab)["*"](scale_factor);
+                        "135";
+                        rb = rb_int["/"](bond_ab)["*"](scale_factor);
+                        "136";
+                        ro = ro_int["/"](bond_ab)["*"](scale_factor);
+                        "137";
                         var RS_Iter12 = RS_Iterable(ra_item);
                         for (var RS_Index12 = 0; RS_Index12["<"](RS_Iter12.length); RS_Index12++) {
                             x = RS_Iter12[RS_Index12];
-                            "122";
+                            "138";
                             x.radius = ra;
                         }
-                        "123";
+                        "139";
                         var RS_Iter13 = RS_Iterable(rb_item);
                         for (var RS_Index13 = 0; RS_Index13["<"](RS_Iter13.length); RS_Index13++) {
                             y = RS_Iter13[RS_Index13];
-                            "124";
+                            "140";
                             y.radius = rb;
                         }
-                        "125";
+                        "141";
                         var RS_Iter14 = RS_Iterable(ro_item);
                         for (var RS_Index14 = 0; RS_Index14["<"](RS_Iter14.length); RS_Index14++) {
                             z = RS_Iter14[RS_Index14];
-                            "126";
+                            "142";
                             z.radius = ro;
                         }
-                        "127";
+                        "143";
                         return bond_ab;
                     };
 
                     set_ra = function set_ra(s) {
                         var RS_ls, ra_int, ra, x;
-                        "131";
+                        "147";
                         ra_int = s.number;
-                        "132";
-                        ra = ra_int["/"](2)["/"](bond_ab)["*"](1);
-                        "133";
+                        "148";
+                        ra = ra_int["/"](bond_ab)["*"](scale_factor);
+                        "149";
                         var RS_Iter15 = RS_Iterable(ra_item);
                         for (var RS_Index15 = 0; RS_Index15["<"](RS_Iter15.length); RS_Index15++) {
                             x = RS_Iter15[RS_Index15];
-                            "134";
+                            "150";
                             x.radius = ra;
                         }
-                        "135";
+                        "151";
                         return ra;
                     };
 
                     set_rb = function set_rb(s) {
                         var RS_ls, rb_int, rb, y;
-                        "138";
+                        "154";
                         rb_int = s.number;
-                        "139";
-                        rb = rb_int["/"](2)["/"](bond_ab)["*"](1);
-                        "140";
+                        "155";
+                        rb = rb_int["/"](bond_ab)["*"](scale_factor);
+                        "156";
                         var RS_Iter16 = RS_Iterable(rb_item);
                         for (var RS_Index16 = 0; RS_Index16["<"](RS_Iter16.length); RS_Index16++) {
                             y = RS_Iter16[RS_Index16];
-                            "141";
+                            "157";
                             y.radius = rb;
                         }
-                        "142";
+                        "158";
                         return rb;
                     };
 
                     set_ro = function set_ro(s) {
                         var RS_ls, ro_int, ro, y;
-                        "146";
+                        "162";
                         ro_int = s.number;
-                        "147";
-                        ro = ro_int["/"](2)["/"](bond_ab)["*"](1);
-                        "148";
+                        "163";
+                        ro = ro_int["/"](bond_ab)["*"](scale_factor);
+                        "164";
                         var RS_Iter17 = RS_Iterable(ro_item);
                         for (var RS_Index17 = 0; RS_Index17["<"](RS_Iter17.length); RS_Index17++) {
                             y = RS_Iter17[RS_Index17];
-                            "149";
+                            "165";
                             y.radius = ro;
                         }
-                        "150";
+                        "166";
                         return ro;
+                    };
+
+                    set_scale_factor = function set_scale_factor(s) {
+                        var RS_ls, scale_factor, ra, rb, ro, x, y, z;
+                        "169";
+                        scale_factor = s.number;
+                        "170";
+                        ra = ra_int["/"](bond_ab)["*"](1)["*"](scale_factor);
+                        "171";
+                        rb = rb_int["/"](bond_ab)["*"](1)["*"](scale_factor);
+                        "172";
+                        ro = ro_int["/"](bond_ab)["*"](1)["*"](scale_factor);
+                        "173";
+                        var RS_Iter18 = RS_Iterable(ra_item);
+                        for (var RS_Index18 = 0; RS_Index18["<"](RS_Iter18.length); RS_Index18++) {
+                            x = RS_Iter18[RS_Index18];
+                            "174";
+                            x.radius = ra;
+                        }
+                        "175";
+                        var RS_Iter19 = RS_Iterable(rb_item);
+                        for (var RS_Index19 = 0; RS_Index19["<"](RS_Iter19.length); RS_Index19++) {
+                            y = RS_Iter19[RS_Index19];
+                            "176";
+                            y.radius = rb;
+                        }
+                        "177";
+                        var RS_Iter20 = RS_Iterable(ro_item);
+                        for (var RS_Index20 = 0; RS_Index20["<"](RS_Iter20.length); RS_Index20++) {
+                            z = RS_Iter20[RS_Index20];
+                            "178";
+                            z.radius = ro;
+                        }
+                        "179";
+                        return [scale_factor, ra, rb, ro];
                     };
 
                     set_L = function set_L(s) {
                         var RS_ls, L, RS_unpack;
-                        "154";
-                        "155";
-                        "156";
-                        "157";
-                        "158";
-                        "159";
+                        "183";
+                        "184";
+                        "185";
+                        "186";
+                        "187";
+                        "188";
                         L = s.number;
-                        "160";
+                        "189";
                         clear();
-                        "161";
+                        "190";
                         RS_unpack = build(L, ra, rb, ra_item, rb_item, ro_item, cylinder_item, total_item);
                         RS_unpack = RS_unpack_asarray(5, RS_unpack);
                         ra_item = RS_unpack[0];
@@ -327,89 +363,107 @@ var main = _streamline.async(regeneratorRuntime.mark(function _$$main$$(_2) {
 
 
                     strings();
-                    "6";
+                    "5";
                     scene5 = RS_interpolate_kwargs.call(this, canvas, [RS_desugar_kwargs({ background: color.black, width: 600, length: 600, center: vector(1["-u"](), 1["-u"](), 1["-u"]()) })]);
-                    "8";
+                    "7";
                     L = 1;
-                    "9";
-                    bond_ab = 3.905;
-                    "10";
-                    ra_int = 2.15;
-                    "11";
-                    rb_int = 1.47;
-                    "12";
-                    ro_int = .74;
-                    "14";
-                    ra = ra_int["/"](2)["/"](bond_ab)["*"](1);
-                    "15";
-                    rb = rb_int["/"](2)["/"](bond_ab)["*"](1);
                     "16";
-                    ro = ro_int["/"](2)["/"](bond_ab)["*"](1);
+                    bond_ab = 3.905;
+                    "17";
+                    ra_int = 1.32;
                     "18";
-                    ra_item = RS_list_decorate([]);
+                    rb_int = .75;
                     "19";
-                    rb_item = RS_list_decorate([]);
-                    "20";
-                    ro_item = RS_list_decorate([]);
+                    ro_int = 1.21;
                     "21";
-                    cylinder_item = RS_list_decorate([]);
+                    bond_default_text = str(bond_ab);
                     "22";
-                    total_item = RS_list_decorate([]);
+                    ra_default_text = str(ra_int);
+                    "23";
+                    rb_default_text = str(rb_int);
                     "24";
-                    running = false;
-                    "26";
-                    opatom = 1;
+                    ro_default_text = str(ro_int);
                     "27";
-                    opbar = 1;
+                    scale_factor = .5;
+                    "28";
+                    scale_default_text = str(scale_factor);
+                    "30";
+                    ra = ra_int["/"](bond_ab)["*"](scale_factor);
                     "31";
+                    rb = rb_int["/"](bond_ab)["*"](scale_factor);
+                    "32";
+                    ro = ro_int["/"](bond_ab)["*"](scale_factor);
+                    "34";
+                    ra_item = RS_list_decorate([]);
+                    "35";
+                    rb_item = RS_list_decorate([]);
+                    "36";
+                    ro_item = RS_list_decorate([]);
+                    "37";
+                    cylinder_item = RS_list_decorate([]);
+                    "38";
+                    total_item = RS_list_decorate([]);
+                    "40";
+                    running = false;
+                    "42";
+                    opatom = 1;
+                    "43";
+                    opbar = 1;
+                    "47";
                     ;
                     if (!build.__argnames__) Object.defineProperties(build, {
                         __argnames__: { value: ["L", "ra", "rb", "ra_item", "rb_item", "ro_item", "cylinder_item", "total_item"] }
                     });
 
-                    "78";
+                    "94";
                     ;
                     if (!build_button.__argnames__) Object.defineProperties(build_button, {
                         __argnames__: { value: ["s"] }
                     });
 
-                    "91";
+                    "107";
                     ;
 
-                    "106";
+                    "122";
                     ;
 
-                    "116";
+                    "132";
                     ;
                     if (!set_bondab.__argnames__) Object.defineProperties(set_bondab, {
                         __argnames__: { value: ["s"] }
                     });
 
-                    "130";
+                    "146";
                     ;
                     if (!set_ra.__argnames__) Object.defineProperties(set_ra, {
                         __argnames__: { value: ["s"] }
                     });
 
-                    "137";
+                    "153";
                     ;
                     if (!set_rb.__argnames__) Object.defineProperties(set_rb, {
                         __argnames__: { value: ["s"] }
                     });
 
-                    "145";
+                    "161";
                     ;
                     if (!set_ro.__argnames__) Object.defineProperties(set_ro, {
                         __argnames__: { value: ["s"] }
                     });
 
-                    "153";
+                    "168";
+                    ;
+                    if (!set_scale_factor.__argnames__) Object.defineProperties(set_scale_factor, {
+                        __argnames__: { value: ["s"] }
+                    });
+
+                    "182";
                     ;
                     if (!set_L.__argnames__) Object.defineProperties(set_L, {
                         __argnames__: { value: ["s"] }
                     });
 
-                    "166";
+                    "195";
                     RS_unpack = build(L, ra, rb, ra_item, rb_item, ro_item, cylinder_item, total_item);
                     RS_unpack = RS_unpack_asarray(5, RS_unpack);
                     ra_item = RS_unpack[0];
@@ -417,90 +471,98 @@ var main = _streamline.async(regeneratorRuntime.mark(function _$$main$$(_2) {
                     ro_item = RS_unpack[2];
                     cylinder_item = RS_unpack[3];
                     total_item = RS_unpack[4];
-                    "171";
-                    RS_interpolate_kwargs.call(this, wtext, [RS_desugar_kwargs({ text: "<h2>Perovskite Example: Strontium titanate(SrTiO3)<\/h2><hr>", pos: scene5.title_anchor })]);
-                    "175";
-                    RS_interpolate_kwargs.call(this, wtext, [RS_desugar_kwargs({ text: "Perovskite is used to represent any crystal structure with the same type as \\(CaTiO_{3} \\) It is a promising candidate material insolar cell and laser. \nThe default example below shows SrTiO3.\n", pos: scene5.title_anchor })]);
-                    "181";
-                    RS_interpolate_kwargs.call(this, wtext, [RS_desugar_kwargs({ text: "<h3>Control</h3><ul><li><b>Rotate</b>: Right Button drag or Ctrl-drag</li><li><b>Zoom</b>: Drag with middle button or use scroll wheel</li></ul>", pos: scene5.title_anchor })]);
-                    "190";
-                    RS_interpolate_kwargs.call(this, wtext, [RS_desugar_kwargs({ text: "<h3>Modifying Structure</h3><ul><li><b>L</b>: Number of Unit Cell(Integer Only)</li><li><b>bond_ab</b>: Lattice Constant (\\(10^{-10} \\)meters)</li><li><b><font color = \"Green\">r_a<font color =\"black\"></b>: Atomic Radius of Strontium [<font color = \"Green\">Green<font color =\"black\">] (\\(10^{-10} \\)meter)</li><li><b><font color =\"Blue\">r_b<font color =\"black\"></b>: Atomic Radius of Titanium [<font color = \"Blue\">Green<font color =\"black\">] (\\(10^{-10} \\)meter)</li><li><b><font color =\"Red\">r_o<font color =\"black\"></b>: Atomic Radius of Oxygen [<font color =\"Red\">Red<font color =\"black\">] (\\(10^{-10} \\)meter)</li></ul>", pos: scene5.title_anchor })]);
-                    "192";
-                    RS_interpolate_kwargs.call(this, wtext, [RS_desugar_kwargs({ text: "<hr>", pos: scene5.title_anchor })]);
-                    "195";
-                    b1 = RS_interpolate_kwargs.call(this, button, [RS_desugar_kwargs({ text: "Run", pos: scene5.title_anchor, bind: build_button })]);
-                    "196";
-                    b2 = RS_interpolate_kwargs.call(this, button, [RS_desugar_kwargs({ text: "Reset", pos: scene5.title_anchor, bind: reset })]);
-                    "198";
-                    it0 = RS_interpolate_kwargs.call(this, wtext, [RS_desugar_kwargs({ text: "<h5>Parameters:</h5>Adjust the parameters using the input box(press enter key after modifying parameters)\n" })]);
-                    "206";
-                    it1 = RS_interpolate_kwargs.call(this, wtext, [RS_desugar_kwargs({ text: "L: " })]);
-                    "207";
-                    ib1 = RS_interpolate_kwargs.call(this, winput, [RS_desugar_kwargs({ type: "numeric", pos: scene5.caption_anchor, bind: set_L, text: 1 })]);
-                    "209";
-                    scene5.append_to_caption("\n");
-                    "211";
-                    it2 = RS_interpolate_kwargs.call(this, wtext, [RS_desugar_kwargs({ text: "bond_ab: " })]);
-                    "212";
-                    ib2 = RS_interpolate_kwargs.call(this, winput, [RS_desugar_kwargs({ type: "numeric", pos: scene5.caption_anchor, bind: set_bondab, text: 3.905 })]);
-                    "214";
-                    RS_interpolate_kwargs.call(this, wtext, [RS_desugar_kwargs({ text: "(\\(10^{-10} \\)meter)" })]);
-                    "215";
-                    scene5.append_to_caption("\n");
-                    "217";
-                    it3 = RS_interpolate_kwargs.call(this, wtext, [RS_desugar_kwargs({ text: "ra: " })]);
-                    "218";
-                    ib3 = RS_interpolate_kwargs.call(this, winput, [RS_desugar_kwargs({ type: "numeric", pos: scene5.caption_anchor, bind: set_ra, text: 2.15 })]);
-                    "219";
-                    RS_interpolate_kwargs.call(this, wtext, [RS_desugar_kwargs({ text: "(\\(10^{-10} \\)meter)" })]);
-                    "221";
-                    scene5.append_to_caption("\n");
-                    "223";
-                    it4 = RS_interpolate_kwargs.call(this, wtext, [RS_desugar_kwargs({ text: "rb: " })]);
-                    "224";
-                    ib4 = RS_interpolate_kwargs.call(this, winput, [RS_desugar_kwargs({ type: "numeric", pos: scene5.caption_anchor, bind: set_rb, text: 1.47 })]);
-                    "225";
-                    RS_interpolate_kwargs.call(this, wtext, [RS_desugar_kwargs({ text: "(\\(10^{-10} \\)meter)" })]);
-                    "227";
-                    scene5.append_to_caption("\n");
-                    "229";
-                    it5 = RS_interpolate_kwargs.call(this, wtext, [RS_desugar_kwargs({ text: "ro: " })]);
-                    "230";
-                    ib5 = RS_interpolate_kwargs.call(this, winput, [RS_desugar_kwargs({ type: "numeric", pos: scene5.caption_anchor, bind: set_ro, text: .74 })]);
+                    "200";
+                    RS_interpolate_kwargs.call(this, wtext, [RS_desugar_kwargs({ text: "<h2>Perovskite Example: Calcium Titanate (<b> SrTiO<sub>3<\/sub> </b>)</h2><hr>", pos: scene5.title_anchor })]);
                     "231";
-                    RS_interpolate_kwargs.call(this, wtext, [RS_desugar_kwargs({ text: "(\\(10^{-10} \\)meter)" })]);
-                    "233";
+                    RS_interpolate_kwargs.call(this, wtext, [RS_desugar_kwargs({ text: "\nA <b>Perovskite</b> is a colourless mineral of Calcium Titanate with the chemical formula <b> CaTiO<sub>3</sub> </b>. \nIt is discovered by German mineralogist Gustave Rose who named it after a Russian mineralogist\nLev Alexeievitch Perovskite. Later, perovskites are referred to a family of materials with the \nsame crystal structure as <b> CaTiO<sub>3</sub> </b>. So the general chemical formula for this category \nof perovskite compounds is <b> ABX<sub>3</sub> </b>, where A is a metal cation (positively charged ion), \nB is a cation and X is an anion (negatively charged ion).  If X is oxygen, the sub-category can also be \nrepresented as <b> ABO<sub>3</sub> </b>.\n\n<b> CaTiO<sub>3</sub> </b> consists of three types of ions: positive Calcium ions (symbol: Ca+), Titanium \nions (symbol: Ti+) and negative Oxygen ions (symbol: O-) which alternate with each other in each of the \nthree dimensions. In a unit cell, Ca+ occupies the corners,  Ti+ occupies the center of the lattice and \nO- are at the center of faces. \n\nSimilarly, <b> SrTiO<sub>3</sub> </b> (Strontium Titanate) consists of three types of ions: positive \nStrontium ions (symbol: Sr+), Titanium ions (symbol: Ti+) and negative Oxygen ions (symbol: O-) in the \nsame way. It is one of the few materials with ideal perovskite structure (no slight distortion). \n\nPerovskites are of great importance in material science and can be widely applied to photovoltaics, laser, \nsemiconductors and so on. \n\n<b>Perovskite solar cells</b>: Solar cells with perovskite structures have shown remarkable progress in \nimproving energy conversion efficiency, from reports of about 3% in 2006 to over 24% in 2019 and thus are \nthought to be a frontier energy solution.  Department of Energy is of great interest in research to increase \nthe efficiency and lifetime of hybrid organic-inorganic perovskite solar cells. Targeted materials include \nmethylammonium lead halide, i.e., <b> CH<sub>3</sub>NH<sub>3</sub>PbX<sub>3</sub> </b>, where X = I, Br or Cl.\n\nThere are two GUI files for Ideal Perovskite Structure solids. One for Calcium Titanate (<b> CaTiO<sub>3</sub> </b>), and \none for Strontium Titanate (<b> SrTiO<sub>3</sub> </b>)\n\n", pos: scene5.title_anchor })]);
+                    "237";
+                    RS_interpolate_kwargs.call(this, wtext, [RS_desugar_kwargs({ text: "<h3>Control</h3><ul><li><b>Rotate</b>: Right Button drag or Ctrl-drag</li><li><b>Zoom</b>: Drag with middle button or use scroll wheel</li></ul>", pos: scene5.title_anchor })]);
+                    "246";
+                    RS_interpolate_kwargs.call(this, wtext, [RS_desugar_kwargs({ text: "<h3>Modifying Structure</h3><ul><li><b>L</b>: Number of Unit Cells(Integar Only)</li><li><b>bond</b>: distance between two closest Ca+ ions </li><li><b><font color =\"Green\">r_a<font color =\"black\"></b>: ionic radius of Sr+ [<font color = \"Green\">Green<font color =\"black\">] </li><li><b><font color =\"Blue\">r_b<font color =\"black\"></b>: ionic radius of Ti+ [<font color =\"Blue\">Blue<font color =\"black\">] </li><li><b><font color =\"Red\">r_o<font color =\"black\"></b>: ionic radius of O- [<font color =\"Red\">Red<font color =\"black\">] </li></ul>", pos: scene5.title_anchor })]);
+                    "248";
+                    RS_interpolate_kwargs.call(this, wtext, [RS_desugar_kwargs({ text: "<hr>", pos: scene5.title_anchor })]);
+                    "251";
+                    b1 = RS_interpolate_kwargs.call(this, button, [RS_desugar_kwargs({ text: "Run", pos: scene5.title_anchor, bind: build_button })]);
+                    "252";
+                    b2 = RS_interpolate_kwargs.call(this, button, [RS_desugar_kwargs({ text: "Reset", pos: scene5.title_anchor, bind: reset })]);
+                    "254";
+                    it0 = RS_interpolate_kwargs.call(this, wtext, [RS_desugar_kwargs({ text: "<h5>Parameters:</h5>Adjust the parameters using the input box(press Enter key after modifying parameters every time)\n" })]);
+                    "258";
+                    it1 = RS_interpolate_kwargs.call(this, wtext, [RS_desugar_kwargs({ text: "L: " })]);
+                    "259";
+                    ib1 = RS_interpolate_kwargs.call(this, winput, [RS_desugar_kwargs({ type: "numeric", pos: scene5.caption_anchor, bind: set_L, text: 1 })]);
+                    "260";
                     scene5.append_to_caption("\n");
-                    "235";
+                    "262";
+                    it2 = RS_interpolate_kwargs.call(this, wtext, [RS_desugar_kwargs({ text: "bond: " })]);
+                    "263";
+                    ib2 = RS_interpolate_kwargs.call(this, winput, [RS_desugar_kwargs({ type: "numeric", pos: scene5.caption_anchor, bind: set_bondab, text: bond_default_text })]);
+                    "264";
+                    RS_interpolate_kwargs.call(this, wtext, [RS_desugar_kwargs({ text: "\\(   \\unicode{x212B}   \\)" })]);
+                    "265";
+                    scene5.append_to_caption("\n");
+                    "267";
+                    it3 = RS_interpolate_kwargs.call(this, wtext, [RS_desugar_kwargs({ text: "ra: " })]);
+                    "268";
+                    ib3 = RS_interpolate_kwargs.call(this, winput, [RS_desugar_kwargs({ type: "numeric", pos: scene5.caption_anchor, bind: set_ra, text: ra_default_text })]);
+                    "269";
+                    RS_interpolate_kwargs.call(this, wtext, [RS_desugar_kwargs({ text: "\\(   \\unicode{x212B}   \\)" })]);
+                    "270";
+                    scene5.append_to_caption("\n");
+                    "272";
+                    it4 = RS_interpolate_kwargs.call(this, wtext, [RS_desugar_kwargs({ text: "rb: " })]);
+                    "273";
+                    ib4 = RS_interpolate_kwargs.call(this, winput, [RS_desugar_kwargs({ type: "numeric", pos: scene5.caption_anchor, bind: set_rb, text: rb_default_text })]);
+                    "274";
+                    RS_interpolate_kwargs.call(this, wtext, [RS_desugar_kwargs({ text: "\\(   \\unicode{x212B}   \\)" })]);
+                    "275";
+                    scene5.append_to_caption("\n");
+                    "277";
+                    it5 = RS_interpolate_kwargs.call(this, wtext, [RS_desugar_kwargs({ text: "ro: " })]);
+                    "278";
+                    ib5 = RS_interpolate_kwargs.call(this, winput, [RS_desugar_kwargs({ type: "numeric", pos: scene5.caption_anchor, bind: set_ro, text: ro_default_text })]);
+                    "279";
+                    RS_interpolate_kwargs.call(this, wtext, [RS_desugar_kwargs({ text: "\\(   \\unicode{x212B}   \\)" })]);
+                    "280";
+                    scene5.append_to_caption("\n");
+                    "284";
+                    it6 = RS_interpolate_kwargs.call(this, wtext, [RS_desugar_kwargs({ text: "scale: " })]);
+                    "285";
+                    ib6 = RS_interpolate_kwargs.call(this, winput, [RS_desugar_kwargs({ type: "numeric", pos: scene5.caption_anchor, bind: set_scale_factor, text: scale_default_text })]);
+                    "286";
+                    RS_interpolate_kwargs.call(this, wtext, [RS_desugar_kwargs({ text: "( Must be less than or equal to 1. A value less than 1 is used for an exploded view. )" })]);
+                    "291";
+                    scene5.append_to_caption("\n\n");
+                    "294";
                     MathJax.Hub.Queue(RS_list_decorate(["Typeset", MathJax.Hub]));
-                    "238";
+                    "297";
 
-                case 156:
+                case 180:
                     if (!true) {
-                            _context.next = 164;
+                            _context.next = 188;
                             break;
                         }
 
-                    "239";
-                    _context.next = 160;
-                    return _streamline.await(_filename, 473, null, rate, 1, null, false, [100, true]);
+                    "298";
+                    _context.next = 184;
+                    return _streamline.await(_filename, 532, null, rate, 1, null, false, [100, true]);
 
-                case 160:
-                    "240";
+                case 184:
+                    "299";
                     if (running) {
-                            "241";
-                            RS_Iter18 = RS_Iterable(total_item);
+                            "300";
+                            RS_Iter21 = RS_Iterable(total_item);
 
-                            for (RS_Index18 = 0; RS_Index18["<"](RS_Iter18.length); RS_Index18++) {
-                                b = RS_Iter18[RS_Index18];
-                                "242";
-                                RS_interpolate_kwargs.call(b, b.rotate, [RS_desugar_kwargs({ angle: .01, axis: vector(0, 1, 0), origin: vector(1["-u"](), 1["-u"](), 1["-u"]()) })]);
+                            for (RS_Index21 = 0; RS_Index21["<"](RS_Iter21.length); RS_Index21++) {
+                                b = RS_Iter21[RS_Index21];
+                                "301";
+                                RS_interpolate_kwargs.call(b, b.rotate, [RS_desugar_kwargs({ angle: .01, axis: vector(0, 1, 0), origin: vector(0, 0, 0) })]);
                             }
                         }
-                    _context.next = 156;
+                    _context.next = 180;
                     break;
 
-                case 164:
+                case 188:
                 case "end":
                     return _context.stop();
             }
