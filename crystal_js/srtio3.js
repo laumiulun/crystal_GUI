@@ -1,4 +1,3 @@
-
 // START JAVASCRIPT
 ;(function() {"use strict";
 
@@ -556,7 +555,7 @@ var main = _streamline.async(regeneratorRuntime.mark(function _$$main$$(_2) {
                             for (RS_Index21 = 0; RS_Index21["<"](RS_Iter21.length); RS_Index21++) {
                                 b = RS_Iter21[RS_Index21];
                                 "301";
-                                RS_interpolate_kwargs.call(b, b.rotate, [RS_desugar_kwargs({ angle: .01, axis: vector(0, 1, 0), origin: vector(0, 0, 0) })]);
+                                RS_interpolate_kwargs.call(b, b.rotate, [RS_desugar_kwargs({ angle: .01, axis: vector(0, 1, 0), origin: vector(1["-u"](), 1["-u"](), 1["-u"]()) })]);
                             }
                         }
                     _context.next = 180;
