@@ -3,9 +3,13 @@ import numpy as np
 # %matplotlib notebook
 import stl
 import numpy as np
-from mpl_toolkits import mplot3d
-import matplotlib.pyplot as plt
+#from mpl_toolkits import mplot3d
+#import matplotlib.pyplot as plt
 import sys
+import glob
+import os
+
+
 
 def plot_stl(stl_file,debug=1):
     figure = plt.figure()
@@ -195,15 +199,135 @@ def read_n_construct_STL(input_file,output_file='output.stl',plot=False):
 # print(sys.argv[0])
 
 
-if (len(sys.argv)!=3 and len(sys.argv)!=2):
+# input arguments
+
+
+# to do for file path
+# 1. Number of args 
+# 2. If number of paths 
+        # -i = one files
+        # -a = folder 
+
+def check_dirs(path):
+    if not os.path.exists(path):
+        print("Directory does not exists "+str(path))
+        os.makedirs(path)
+        return False
+    else:
+        print("Directory exists " + str(path))
+        return True
+
+if (len(sys.argv)>4 and len(sys.argv)==0):
     print("python stl_export_fromcsv.py <inputfile> <exportfile>")
+    print("if a folder is needed conversion instead, use \"-a\" attribute")
     sys.exit()
 
-elif (len(sys.argv)==2):
-    input = sys.argv[1]
-    output = 'output.stl'
-    read_n_construct_STL(input,output)
-else:
-    input = sys.argv[1]
-    output = sys.argv[2]
-    read_n_construct_STL(input,output)
+
+# one stl
+elif sys.argv[1] =='-i':
+    if len(sys.argv)==3:
+        input = sys.argv[2]
+        output = 'output.stl'
+        read_n_construct_STL(input,output)    
+    elif len(sys.argv)==4:
+        input = sys.argv[2]
+        output = sys.argv[3]
+        read_n_construct_STL(input,output)
+
+# one folder of stl
+elif sys.argv[1] == '-a':
+    # check if folder exists, else make stl
+    # check if it contains any stl files in folders
+    if len(sys.argv)==3:
+        # check inputs dirs
+        check_dirs(sys.argv[2])
+        # create output dirs
+        output_path = 'output_stl_paths'
+        check_dirs(output_path)
+        # check stl in inputs dirs
+        
+        folder_base = sys.argv[2]
+        folder_end = output_path
+
+        csv_file_name = glob.glob(folder_base+'/*.csv')
+
+        if len(csv_file_name) == 0:
+            print("No CSV file inside!")
+            sys.exit()
+        # print(csv_file_name)
+
+        stl_file_path = []
+        for i in range(len(csv_file_name)):
+            # file_name_abs.append(os.path.abspath(file_name[i]))
+            temp = (os.path.basename(csv_file_name[i])[:-3]+"stl")
+            stl_file_path.append(os.path.join(folder_end,temp))
+        # print(stl_file_path)
+
+        for i in range(len(csv_file_name)):
+            read_n_construct_STL(csv_file_name[i],stl_file_path[i])
+
+        
+        
+    elif len(sys.argv)==4:
+        # check input and output dirs
+        check_dirs(sys.argv[2])
+        check_dirs(sys.argv[3])
+
+        folder_base = sys.argv[2]
+        folder_end = sys.argv[3]
+
+        csv_file_name = glob.glob(folder_base+'/*.csv')
+
+        if len(csv_file_name) == 0:
+            print("No CSV file inside!")
+            sys.exit()
+        # print(csv_file_name)
+        stl_file_path = []
+        for i in range(len(csv_file_name)):
+            # file_name_abs.append(os.path.abspath(file_name[i]))
+            temp = (os.path.basename(csv_file_name[i])[:-3]+"stl")
+            stl_file_path.append(os.path.join(folder_end,temp))
+        # print(stl_file_path)
+        for i in range(len(csv_file_name)):
+            read_n_construct_STL(csv_file_name[i],stl_file_path[i])
+
+
+# if (len(sys.argv)!=3 and len(sys.argv)!=2):
+
+
+# elif (len(sys.argv)==2):
+#     if (sys.argv[1] == '-all'):
+#         folder_base = '/whole_folder_csv/*.csv'
+#         folder_end = '/whole_folder_stl'
+#         # grab the files
+#         file_name = glob.glob(folder_base)
+
+#         stl_file_path = []
+#         for i in range(len(file_name)):
+#             # file_name_abs.append(os.path.abspath(file_name[i]))
+#             temp = (os.path.basename(file_name[i])[:-3]+"stl")
+#             stl_file_path.append(os.path.join(folder_end,temp))
+#         print(stl_file_path)
+
+#     # include helper inarugs
+#     elif  (sys.argv[1] == '-h'):
+#         print("python stl_export_fromcsv.py <inputfile> <exportfile>")
+#         print("if whole folder is instead, use \"-all\" attribute")
+#         sys.exit()
+#     # output just one files if 
+#     else:
+#         input = sys.argv[1]
+#         output = 'output.stl'
+#         read_n_construct_STL(input,output)
+# # elif input is supply
+# elif (len(sys.argv)==2):
+
+#     input = sys.argv[1]
+#     output = sys.argv[2]
+#     read_n_construct_STL(input,output)
+
+
+# else:
+#     print("Arguments number not correct")
+#     print("python stl_export_fromcsv.py <inputfile> <exportfile>")
+#     sys.exit()
