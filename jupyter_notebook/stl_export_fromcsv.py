@@ -203,10 +203,10 @@ def read_n_construct_STL(input_file,output_file='output.stl',plot=False):
 
 
 # to do for file path
-# 1. Number of args 
-# 2. If number of paths 
+# 1. Number of args
+# 2. If number of paths
         # -i = one files
-        # -a = folder 
+        # -a = folder
 
 def check_dirs(path):
     if not os.path.exists(path):
@@ -228,7 +228,7 @@ elif sys.argv[1] =='-i':
     if len(sys.argv)==3:
         input = sys.argv[2]
         output = 'output.stl'
-        read_n_construct_STL(input,output)    
+        read_n_construct_STL(input,output)
     elif len(sys.argv)==4:
         input = sys.argv[2]
         output = sys.argv[3]
@@ -245,7 +245,7 @@ elif sys.argv[1] == '-a':
         output_path = 'output_stl_paths'
         check_dirs(output_path)
         # check stl in inputs dirs
-        
+
         folder_base = sys.argv[2]
         folder_end = output_path
 
@@ -264,10 +264,11 @@ elif sys.argv[1] == '-a':
         # print(stl_file_path)
 
         for i in range(len(csv_file_name)):
+            print("Translating " + csv_file_name[i])
             read_n_construct_STL(csv_file_name[i],stl_file_path[i])
+            print("Finish!")
 
-        
-        
+
     elif len(sys.argv)==4:
         # check input and output dirs
         check_dirs(sys.argv[2])
@@ -289,7 +290,9 @@ elif sys.argv[1] == '-a':
             stl_file_path.append(os.path.join(folder_end,temp))
         # print(stl_file_path)
         for i in range(len(csv_file_name)):
+            print("Translating " + csv_file_name[i])
             read_n_construct_STL(csv_file_name[i],stl_file_path[i])
+            print("Finish!")
 
 
 # if (len(sys.argv)!=3 and len(sys.argv)!=2):
@@ -314,7 +317,7 @@ elif sys.argv[1] == '-a':
 #         print("python stl_export_fromcsv.py <inputfile> <exportfile>")
 #         print("if whole folder is instead, use \"-all\" attribute")
 #         sys.exit()
-#     # output just one files if 
+#     # output just one files if
 #     else:
 #         input = sys.argv[1]
 #         output = 'output.stl'
