@@ -125,6 +125,23 @@ def scale_obj(obj,scale):
     scale_mat = np.identity(3)*scale
     stl.mesh.Mesh.rotate_using_matrix(obj,scale_mat)
 
+def scale_obj_cyl(obj,scale):
+    scale_mat = np.identity(3)*scale
+    stl.mesh.Mesh.rotate_using_matrix(obj,scale_mat)
+
+def extend_cylinder(obj,axis,length):
+    scale_mat = np.identity(3)
+    if axis == 0:
+        scale_mat[0,0] = length
+        # print(scale_mat)
+    elif axis == 1:
+        scale_mat[1,1] = length
+        # print(scale_mat)
+    elif axis == 2:
+        scale_mat[2,2] = length
+        # print(scale_mat)
+    stl.mesh.Mesh.rotate_using_matrix(obj,scale_mat)
+
 
 def translate_obj(obj,x,y,z,scale=1):
     translate(obj,x*scale,0,1,'x')
@@ -144,7 +161,8 @@ def copy_scale_translate_sphere(obj,x,y,z,scale_num,scale_factor = 80.0/3):
     translate(_obj,z*scale_factor,0,1,'z')
     return _obj
 
-def copy_scale_translate_cyl(x,y,z,axis,scale_factor,cylinder_x,cylinder_y,cylinder_z):
+# Need to get scale
+def copy_scale_translate_cyl(x,y,z,axis,length,scale_factor,cylinder_x,cylinder_y,cylinder_z):
     cylinder_x = stl.mesh.Mesh.from_file('stl_data/stl_test/cylinder_rad1_len10_edgecenter_x.stl')
     cylinder_y = stl.mesh.Mesh.from_file('stl_data/stl_test/cylinder_rad1_len10_edgecenter_y.stl')
     cylinder_z = stl.mesh.Mesh.from_file('stl_data/stl_test/cylinder_rad1_len10_edgecenter_z.stl')
@@ -155,6 +173,7 @@ def copy_scale_translate_cyl(x,y,z,axis,scale_factor,cylinder_x,cylinder_y,cylin
     elif axis == 2:
         _obj = copy_obj(cylinder_z)
 
+    extend_cylinder(_obj,axis,length)
     scale_obj(_obj,scale = 0.1*scale_factor)
     translate(_obj,x*scale_factor,0,1,'x')
     translate(_obj,y*scale_factor,0,1,'y')
@@ -175,9 +194,7 @@ def read_n_construct_STL(input_file,output_file='output.stl',plot=False):
     # read the datafile
     coord = np.genfromtxt(input_file,delimiter=',')
 
-
     scale_factor = 80.0/3
-
     sphere_list = []
     cylinder_list = []
     for i in range(len(coord)):
@@ -186,7 +203,7 @@ def read_n_construct_STL(input_file,output_file='output.stl',plot=False):
             obj = copy_scale_translate_sphere(sphere,coord[i,1],coord[i,2],coord[i,3],coord[i,4])
             sphere_list.append(obj)
         elif coord[i,0] == 1:
-            obj = copy_scale_translate_cyl(coord[i,1],coord[i,2],coord[i,3],coord[i,4],80.0/3,cylinder_x,cylinder_y,cylinder_z)
+            obj = copy_scale_translate_cyl(coord[i,1],coord[i,2],coord[i,3],coord[i,4],coord[i,5],80.0/3,cylinder_x,cylinder_y,cylinder_z)
             cylinder_list.append(obj)
 
     # print(len(sphere_list))
